@@ -31,15 +31,5 @@ Tout le style des pages devra-t-être dans le dossier /style et devront être de
     - _contact.scss
  
 :warning:	Pour éviter des problèmes de noms de classes similaires ou des styles qui affectent plusieurs balises de différentes pages de façon involontaire, on met des classes sur les balises <html> et on imbrique tous les styles de la page dans celle-ci 
-(ex: <html class="home">
-  <style>
-  .home {
-      body {
-        ...
-      }
-      .a-button{
-        ...
-      }
-  }
-  </style>
-)
+
+  ( ex: <html class="home"> <style> .home { body {...} .a-button{...} } </style> )
