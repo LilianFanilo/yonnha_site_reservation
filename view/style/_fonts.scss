@@ -1,0 +1,19 @@
+/* ----------------------------- *
+ *             FONTS             *
+ * ----------------------------- */
+
+ @font-face {
+    font-family: 'TAN-PEARL';
+    src: url('../fonts/TAN-PEARL.woff2') format('woff2'),
+    url('../fonts/TAN-PEARL.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PEIGNOT-LIGHT';
+    src: url('../fonts/peignot-light.woff2') format('woff2'),
+    url('../fonts/peignot-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
