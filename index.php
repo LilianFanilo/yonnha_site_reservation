@@ -1,6 +1,7 @@
 <?php
 session_start();
-require("model/start.php");
+require "./model/model.php";
+$api_url = "http://localhost/yonnha_hope";
 
 if (isset($_GET['tag'])) 
 {
