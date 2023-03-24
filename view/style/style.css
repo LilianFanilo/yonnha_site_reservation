@@ -64,4 +64,102 @@ address {
   font-style: normal;
 }
 
+/* ----------------------------- *
+ *             FONTS             *
+ * ----------------------------- */
+@font-face {
+  font-family: "TAN-PEARL";
+  src: url("../fonts/TAN-PEARL.woff2") format("woff2"), url("../fonts/TAN-PEARL.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JOSEFINS";
+  src: url("../fonts/JosefinSlab-VariableFont_wght.woff2") format("woff2"), url("../fonts/JosefinSlab-VariableFont_wght.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* ----------------------------- *
+ *             LAYOUT            *
+ * ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFEF0;
+  height: 100vh;
+  font-family: "TAN-PEARL";
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ----------------------------- *
+ *             NAV-BAR           *
+ * ----------------------------- */
+header {
+  background-color: transparent;
+}
+
+.container {
+  max-width: 98rem;
+  margin-inline: auto;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+.navbar img {
+  max-height: 5em;
+}
+
+.nav-list {
+  position: relative;
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  min-width: 10rem;
+  text-align: center;
+  padding-block: 1rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+}
+
+.active {
+  position: absolute;
+  bottom: -0.5em;
+  height: 3px;
+  width: 5rem;
+  background-color: #CFAA5B;
+  transition: transform 0.25s;
+}
+
+.nav-item:nth-child(2):hover ~ .active {
+  transform: translateX(10rem);
+}
+.nav-item:nth-child(3):hover ~ .active {
+  transform: translateX(20rem);
+}
+.nav-item:nth-child(4):hover ~ .active {
+  transform: translateX(30rem);
+}
+
 /*# sourceMappingURL=style.css.map */

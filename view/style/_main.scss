@@ -1,0 +1,29 @@
+/* ----------------------------- *
+ *             LAYOUT            *
+ * ----------------------------- */
+
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    &::before, &::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  }
+ 
+  body {
+    background-color: $main-color;
+    height: 100vh;
+    font-family: "TAN-PEARL";
+    font-size: 1em;
+}
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
