@@ -22,14 +22,9 @@ if (isset($_GET['tag']))
         include './view/contact.php';
     }
 
-    if ($tag === "login") 
+    if ($tag === "account") 
     {
-        include './view/login.php';
-    }
-
-    if ($tag === "signup") 
-    {
-        include './view/signup.php';
+        include './view/account.php';
     }
 
     if ($tag === "logout") 
