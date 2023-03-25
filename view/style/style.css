@@ -86,11 +86,11 @@ header {
   background-color: transparent;
 }
 
-.container {
-  display: flex;
-  flex-direction: row-reverse;
-  width: 95%;
-  border-bottom: 2.5px solid #CFAA5B;
+#nav {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.5s ease-in-out;
 }
 
 .navbar {
@@ -101,6 +101,13 @@ header {
 }
 .navbar img {
   max-height: 5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 95%;
+  border-bottom: 2.5px solid #CFAA5B;
 }
 
 .nav-list {
@@ -116,31 +123,27 @@ header {
 }
 
 .nav-link {
-  text-transform: uppercase;
   padding: 5px;
   font-size: 1.2em;
-  text-transform: uppercase;
   text-align: center;
   position: relative;
   margin-right: 20px;
   margin-left: 20px;
 }
-
 .nav-link:after {
   background: none repeat scroll 0 0 transparent;
   top: 2em;
   content: "";
   display: block;
   height: 2.5px;
-  left: 50%;
+  right: 50%;
   position: absolute;
   background: #CFAA5B;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, right 0.7s ease 0s;
   width: 0;
 }
-
 .nav-link:hover:after {
-  width: 100%;
+  width: 50%;
   left: 0;
 }
 
@@ -172,6 +175,23 @@ section {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* ----------------------------- *
+ *             HOME              *
+ * ----------------------------- */
+#home-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home-first h1 {
+  text-align: center;
+  font-size: 4em;
+}
+#home-first h2 {
+  text-align: center;
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */

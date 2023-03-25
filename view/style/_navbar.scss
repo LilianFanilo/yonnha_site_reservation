@@ -6,14 +6,15 @@
     background-color: transparent;
   }
   
-  .container {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 95%;    
-    border-bottom: 2.5px solid $sec-color;
+  #nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    transition: top 0.5s ease-in-out;
 
   }
-  
+
+
   .navbar {
     display: flex;
     align-items: center;
@@ -24,7 +25,14 @@
     }
   }
   
-  
+
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 95%;    
+    border-bottom: 2.5px solid $sec-color;
+
+  }
   .nav-list {
     position: relative;
     display: flex;
@@ -39,36 +47,31 @@
   }
   
   .nav-link {
-    text-transform: uppercase;
     padding: 5px;
     font-size: 1.2em;
-    text-transform: uppercase;
     text-align: center;
     position: relative;
     margin-right: 20px;
     margin-left: 20px;
-
-    
-  }
-
-  .nav-link:after {
-    background: none repeat scroll 0 0 transparent;
-    top: 2em;
-    content: "";
-    display: block;
-    height: 2.5px;
-    left: 50%;
-    position: absolute;
-    background: $sec-color;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
   
-  .nav-link:hover:after {
-    width: 100%;
-    left: 0;
+    &:after {
+      background: none repeat scroll 0 0 transparent;
+      top: 2em;
+      content: "";
+      display: block;
+      height: 2.5px;
+      right: 50%;
+      position: absolute;
+      background: $sec-color;
+      transition: width 0.3s ease 0s, right 0.7s ease 0s;
+      width: 0;
+    }
+  
+    &:hover:after {
+      width: 50%;
+      left: 0;
+    }
   }
-
   
 
   
