@@ -80,6 +80,71 @@ address {
   font-style: normal;
 }
 /* ----------------------------- *
+ *             NAV-BAR           *
+ * ----------------------------- */
+header {
+  background-color: transparent;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 95%;
+  border-bottom: 2.5px solid #CFAA5B;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+.navbar img {
+  max-height: 5em;
+}
+
+.nav-list {
+  position: relative;
+  display: flex;
+  list-style: none;
+  padding-bottom: 1em;
+}
+
+.nav-item {
+  text-align: center;
+  padding-block: 1em;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  padding: 5px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.nav-link:after {
+  background: none repeat scroll 0 0 transparent;
+  top: 2em;
+  content: "";
+  display: block;
+  height: 2.5px;
+  left: 50%;
+  position: absolute;
+  background: #CFAA5B;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/* ----------------------------- *
  *             LAYOUT            *
  * ----------------------------- */
 * {
@@ -100,66 +165,13 @@ body {
   font-size: 1em;
 }
 
+section {
+  height: 100vh;
+}
+
 a {
   text-decoration: none;
   color: inherit;
-}
-
-/* ----------------------------- *
- *             NAV-BAR           *
- * ----------------------------- */
-header {
-  background-color: transparent;
-}
-
-.container {
-  max-width: 98rem;
-  margin-inline: auto;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1em;
-}
-.navbar img {
-  max-height: 5em;
-}
-
-.nav-list {
-  position: relative;
-  display: flex;
-  list-style: none;
-}
-
-.nav-item {
-  min-width: 10rem;
-  text-align: center;
-  padding-block: 1rem;
-}
-
-.nav-link {
-  text-transform: uppercase;
-}
-
-.active {
-  position: absolute;
-  bottom: -0.5em;
-  height: 3px;
-  width: 5rem;
-  background-color: #CFAA5B;
-  transition: transform 0.25s;
-}
-
-.nav-item:nth-child(2):hover ~ .active {
-  transform: translateX(10rem);
-}
-.nav-item:nth-child(3):hover ~ .active {
-  transform: translateX(20rem);
-}
-.nav-item:nth-child(4):hover ~ .active {
-  transform: translateX(30rem);
 }
 
 /*# sourceMappingURL=style.css.map */
