@@ -1,0 +1,37 @@
+/* ----------------------------- *
+ *             HOME              *
+ * ----------------------------- */
+
+
+#home-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7em;
+
+    h1 {
+        text-align: center;
+        font-size: 4em;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        padding-bottom: 5%;
+
+    }
+
+    a {
+        width: fit-content;
+        border: solid 2px $sec-color;
+        padding: 1em;
+    }
+
+}
+
+#home-second {
+    h3 {
+        font-size: 2.5em;
+    }
+}
