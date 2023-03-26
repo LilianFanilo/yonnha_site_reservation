@@ -18,7 +18,7 @@
     <section id="home-first">
     <h1>La révolution des couleurs</h1>
     <h2>Exposition sur les techniques de l'impressionnisme </h2>
-    <a href="">Découvrir</a>
+    <a href="#home-second">Découvrir</a>
     </section>
     <section id="home-second">
         <h3>Tableau</h3>
@@ -35,7 +35,7 @@
 <?php 
 include 'footer.php'
 ?>
-    <script src="./js/functions.js"></script>
+<script src="./js/functions.js"></script>
 
 </body>
 

@@ -2,16 +2,15 @@
  *             NAV-BAR           *
  * ----------------------------- */
 
- header {
-    background-color: transparent;
-  }
+//  header {
+//     background-color: transparent;
+//   }
   
   #nav {
     position: fixed;
     width: 100%;
     z-index: 999;
     transition: top 0.5s ease-in-out;
-
   }
 
 
@@ -19,7 +18,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em;
+    padding-top: 1em;
+    background-color: #fffef0c6;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); 
+    
     img {
       max-height: 5em;
     }
@@ -29,8 +32,10 @@
   .container {
     display: flex;
     flex-direction: row-reverse;
+    height: 100%;
     width: 95%;    
     border-bottom: 2.5px solid $sec-color;
+
 
   }
   .nav-list {
