@@ -1,10 +1,10 @@
 import './App.css';
-import { Table } from '../component/Table/Table';
+import UserTable from '../component/UserTable/UserTable';
 
 export const App = () => {
   return (
     <div className="App">
-        <Table/>
+        <UserTable/>
     </div>
   );
 }
