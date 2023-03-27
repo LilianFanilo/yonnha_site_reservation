@@ -1,8 +1,7 @@
-<link rel="stylesheet" href="../view/style/style.css">
 <?php
 session_start();
 require "./model/model.php";
-$api_url = "http://localhost/yonnha_hope";
+$api_url = "http://localhost/yonnha_hope/api";
 
 if (isset($_GET['tag'])) 
 {

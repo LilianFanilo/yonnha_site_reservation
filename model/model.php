@@ -105,6 +105,29 @@ function traiteLogin(){
 
 //* Paniers
 
+function getBaskets() 
+{
+    global $db;
+    $requete= $db -> prepare("SELECT * FROM basket");
+    $requete -> execute();
+    $data = $requete -> fetchAll(PDO::FETCH_OBJ);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+}
+
+function getBasket($id) 
+{
+    global $db;
+    $requete = $db->prepare('SELECT * FROM basket WHERE id = :id');
+    $requete->bindValue(':id', $id, PDO::PARAM_INT);
+    $requete->execute();
+
+    $data = $requete->fetch(PDO::FETCH_ASSOC);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+
+}
+
 //* Artistes
 
 function getArtists() 
@@ -130,58 +153,52 @@ function getArtist($id)
 
 }
 
-function addArtist($array_POST){
+//* Peintures
 
+function getPaintings() 
+{
     global $db;
-    extract($array_POST);
-    $requete = $db->prepare('INSERT INTO user (login, mail, name, surname, birthday, date_creation, pwd) VALUES (:login, :mail, :name, :surname, birthday, date_creation, pwd)');
-    $requete->bindValue(':login', $login, PDO::PARAM_STR);
-    $requete->bindValue(':mail', $mail, PDO::PARAM_STR);
-    $requete->bindValue(':name', $name, PDO::PARAM_STR);
-    $requete->bindValue(':surname', $surname, PDO::PARAM_STR);
-    $requete->bindValue(':birthday', $birthday, PDO::PARAM_STR);
-    $requete->bindValue(':date_creation', $date_creation, PDO::PARAM_INT);
-    $requete->bindValue(':pwd', $pwd, PDO::PARAM_INT);
-    
-if ($requete->execute())
-{
-    $response=array(
-        'status' => 1,
-        'status_message' => 'Utilisateur ajoute avec succes.'
-    );
-}
-else
-{
-    $response = array (
-        'status' => 0,
-        'status_message' => 'ERREUR'
-    );
-}
-header('Content-Type: application/json');
-echo json_encode($response);
+    $requete= $db -> prepare("SELECT * FROM painting");
+    $requete -> execute();
+    $data = $requete -> fetchAll(PDO::FETCH_OBJ);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
 }
 
-function deleteArtist($id) 
+function getPainting($id) 
 {
-global $db;
-$requete = $db->prepare('DELETE FROM personnages WHERE id = :id');
-$requete->bindValue(':id', $id, PDO::PARAM_INT);
-if ($requete->execute())
-{
-    $response=array(
-        'status' => 1,
-        'status_message' => 'Utilisateur supprimé avec succès'
-    );
-}
-else
-{
-    $response = array (
-        'status' => 0,
-        'status_message' => 'ERREUR'
-    );
-}
-header('Content-Type: application/json');
-echo json_encode($response);
+    global $db;
+    $requete = $db->prepare('SELECT * FROM painting WHERE id = :id');
+    $requete->bindValue(':id', $id, PDO::PARAM_INT);
+    $requete->execute();
+
+    $data = $requete->fetch(PDO::FETCH_ASSOC);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+
 }
 
 //* Billets
+
+function getBillets() 
+{
+    global $db;
+    $requete= $db -> prepare("SELECT * FROM billet");
+    $requete -> execute();
+    $data = $requete -> fetchAll(PDO::FETCH_OBJ);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+}
+
+function getBillet($id) 
+{
+    global $db;
+    $requete = $db->prepare('SELECT * FROM billet WHERE id = :id');
+    $requete->bindValue(':id', $id, PDO::PARAM_INT);
+    $requete->execute();
+
+    $data = $requete->fetch(PDO::FETCH_ASSOC);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+
+}
