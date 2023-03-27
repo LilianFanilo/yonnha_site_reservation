@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require ('../model/model.php');
 
@@ -13,7 +14,23 @@ switch ($request_method) {
             $id = $_GET["id"];
             getUser($id);
         }
-        break;
+
+        if (isset($_GET["session_login"])) {
+			
+            $result_login = traiteLogin();
+    
+            if ($result_login == 1) {
+                header('Location: ../index.php');
+                exit;
+            }
+            if ($result_login == 2) {
+                header ('Location:admin.php?err=mdp');
+            }
+            if ($result_login == 3) {
+                header ('Location:admin.php?err=login');
+            }
+        }
+    break;
     
     case 'POST':
         if (isset($_POST["add_user"])) {
@@ -40,6 +57,7 @@ switch ($request_method) {
             deleteUser($id);            
 
         }
+
         break;
     
         default :

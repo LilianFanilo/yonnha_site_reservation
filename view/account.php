@@ -23,7 +23,7 @@
                 ?>
 
                 <section id="log-page">
-                    <form action="./controller/controller-user.php" method="POST">
+                    <form action="./api/users.php">
                         <ul>
 
                             <li><h1>Entrez vos identifiants</h1></li>
@@ -75,7 +75,7 @@
             <?php
                 include 'navbar.php';
             ?>
-                <form action="./controller/controller-user.php" method="POST">
+                <form action="./api/users.php" method="POST">
                     
                     <label for="login">Saisissez votre login :</label>
                     <input type=text name="login"> 
@@ -96,7 +96,7 @@
                     <input type="password" name="pwd">
                     <input type=submit value= "OK">
 
-                    <input type="hidden" name="session_inscription">                 
+                    <input type="hidden" name="add_user">                 
                 </form>
                 <a href="index.php?tag=account&action=log">Déjà un compte ? Connectez-vous !</a>
         </body>

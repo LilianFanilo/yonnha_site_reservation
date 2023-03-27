@@ -59,6 +59,24 @@
     echo json_encode($response);
 }
 
+function traiteLogin(){
+    global $db;
+    $db->query('SET NAMES utf8');   
+    $requete="SELECT * FROM user WHERE login=:login";
+    $stmt=$db->prepare($requete);
+    $stmt->bindParam(':login',$_GET["login"], PDO::PARAM_STR);
+    $stmt->execute();   
+    if ($stmt->rowcount()==1){
+        $result=$stmt->fetch(PDO::FETCH_ASSOC);
+        if (password_verify($_GET["pwd"],$result["pwd"])){
+            $_SESSION["login"]=$_GET["login"];
+            $_SESSION["id"] = $result["id_user"];
+            $_SESSION['is_admin'] = $result["is_admin"];
+            return 1;
+        } else {return 2;}
+    } else {return 3;}
+};
+
  function deleteUser($id) 
 {
     global $db;
