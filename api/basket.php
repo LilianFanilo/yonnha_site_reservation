@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require ('../model/model.php');
 
 $array_POST = array();
@@ -17,6 +16,28 @@ switch ($request_method) {
     break;
     
     case 'POST':
+
+        if (isset($_POST["add_basket"])) {
+
+            $array_POST= array(
+                "date_visit" => $_POST["date_visit"],
+                "prix_total" => $_POST["prix_total"],
+                "nb_billets" => $_POST["nb_billets"],
+                "id_user" => ,
+ 
+            );
+
+            addBasket($array_POST);
+            print_r($array_POST);
+
+        }
+
+        if (isset($_POST["delete_basket"])) {
+
+            $id = $_GET["id"];
+            deleteBasket($id);            
+
+        }
         
         break;
     

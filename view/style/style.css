@@ -308,4 +308,9 @@ a {
   bottom: 43em;
 }
 
+.hide-input {
+  position: absolute;
+  left: -9999px;
+}
+
 /*# sourceMappingURL=style.css.map */
