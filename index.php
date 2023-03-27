@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../view/style/style.css">
 <?php
 session_start();
 require "./model/model.php";

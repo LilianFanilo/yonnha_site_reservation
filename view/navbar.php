@@ -1,6 +1,6 @@
 <nav id="nav">
     <div class="navbar">
-        <img src="./images/logo.png" alt="Logo link home">
+        <img src="./images/logo-yonnha.png" alt="Logo link home">
         <div class="container">
             <ul class="nav-list">
                 <li class="nav-item"><a href="./index.php" class="nav-link">Accueil</a></li>

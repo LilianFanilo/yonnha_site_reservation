@@ -259,5 +259,10 @@ a {
   width: 48em;
   border: 2.5px solid #CFAA5B;
 }
+#gallery-second .two {
+  height: 25em;
+  width: 10em;
+  border: 2.5px solid #CFAA5B;
+}
 
 /*# sourceMappingURL=style.css.map */
