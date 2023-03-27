@@ -12,13 +12,17 @@
 }
 
 @mixin horizontal {
-    height: 30em;
-    width: 48em;
+    height: 20em;
+    width: 38em;
     border: 2.5px solid $sec-color;
+    position: relative;
+
 }
 
 @mixin vertical {
-    height: 25em;
-    width: 10em;
+    height: 38em;
+    width: 25em;
     border: 2.5px solid $sec-color;
+    position: relative;
+
 }

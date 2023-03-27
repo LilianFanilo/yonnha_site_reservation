@@ -236,7 +236,6 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 7em;
 }
 #gallery-first h1 {
   text-align: center;
@@ -253,16 +252,60 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: fit-content;
 }
 #gallery-second .one {
-  height: 30em;
-  width: 48em;
+  height: 20em;
+  width: 38em;
   border: 2.5px solid #CFAA5B;
+  position: relative;
+  left: 12em;
+  z-index: 111;
 }
 #gallery-second .two {
-  height: 25em;
-  width: 10em;
+  height: 38em;
+  width: 25em;
   border: 2.5px solid #CFAA5B;
+  position: relative;
+  z-index: 99;
+  bottom: 10em;
+  right: 14em;
+}
+#gallery-second .three {
+  height: 38em;
+  width: 25em;
+  border: 2.5px solid #CFAA5B;
+  position: relative;
+  z-index: 50;
+  bottom: 25em;
+  left: 7em;
+}
+#gallery-second .four {
+  height: 38em;
+  width: 25em;
+  border: 2.5px solid #CFAA5B;
+  position: relative;
+  z-index: 55;
+  bottom: 30em;
+  right: 8em;
+}
+#gallery-second .five {
+  height: 20em;
+  width: 38em;
+  border: 2.5px solid #CFAA5B;
+  position: relative;
+  left: 12em;
+  z-index: 111;
+  bottom: 40em;
+}
+#gallery-second .six {
+  height: 38em;
+  width: 25em;
+  border: 2.5px solid #CFAA5B;
+  position: relative;
+  right: 15em;
+  z-index: 111;
+  bottom: 43em;
 }
 
 /*# sourceMappingURL=style.css.map */

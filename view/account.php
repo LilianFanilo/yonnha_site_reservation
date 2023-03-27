@@ -12,7 +12,7 @@
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="../view/style/style.css">
+                <link rel="stylesheet" href="./view/style/style.css">
                 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> -->
                 <title>Connexion</title>
             </head>
@@ -69,12 +69,14 @@
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./view/style/style.css">
             <title>Inscription</title>
         </head>
         <body>
             <?php
                 include 'navbar.php';
             ?>
+            <section id="account-first">
                 <form action="./api/users.php" method="POST">
                     
                     <label for="login">Saisissez votre login :</label>
@@ -99,6 +101,7 @@
                     <input type="hidden" name="add_user">                 
                 </form>
                 <a href="index.php?tag=account&action=log">Déjà un compte ? Connectez-vous !</a>
+                </section>
         </body>
         </html>
 <?php 
