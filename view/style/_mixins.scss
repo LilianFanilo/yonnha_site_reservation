@@ -1,0 +1,24 @@
+@mixin center-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin center-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin horizontal {
+    height: 30em;
+    width: 48em;
+    border: 2.5px solid $sec-color;
+}
+
+@mixin vertical {
+    height: 25em;
+    width: 10em;
+    border: 2.5px solid $sec-color;
+}

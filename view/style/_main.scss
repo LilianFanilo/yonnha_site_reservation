@@ -17,11 +17,30 @@
     }
   }
  
+  ::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #fffef0c6;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $sec-color;
+    border-radius: 50px;
+  }
+
   body {
     background-color: $main-color;
+    background-image: url(../images/background.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     height: 100vh;
     font-family: "TAN-PEARL";
     font-size: 1em;
+    overflow-x: hidden;
 }
 
 section {

@@ -1,9 +1,9 @@
 /* ----------------------------- *
- *             HOME              *
+ *           GALLERIE            *
  * ----------------------------- */
 
 
-#home-first {
+ #gallery-first {
     @include center-col;
     padding-top: 7em;
 
@@ -19,18 +19,11 @@
 
     }
 
-    a {
-        width: fit-content;
-        border: solid 2px $sec-color;
-        padding: 1em;
-    }
-
 }
+#gallery-second {
+    @include center-row;
 
-#home-second {
-
-    h3 {
-        padding: 3em;
-        font-size: 2.5em;
+    .one {
+        @include horizontal;
     }
 }
