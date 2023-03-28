@@ -12,7 +12,7 @@
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="stylesheet" href="./view/style/style.css">
-                <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> -->
+                <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
                 <title>Connexion</title>
             </head>
             <body>
@@ -85,6 +85,7 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="./view/style/style.css">
+            <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
             <title>Inscription</title>
         </head>
         <body>
@@ -121,9 +122,8 @@
         </html>
 <?php 
     endif;
-    if ($action === "logout") :
-        session_destroy();
-?>   
+    if ($action === "logout") :        
+    ?>   
 
         <!DOCTYPE html>
         <html lang="fr">
@@ -132,6 +132,7 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="./view/style/style.css">
+            <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
             <title>Déconnexion</title>
         </head>
         <body>

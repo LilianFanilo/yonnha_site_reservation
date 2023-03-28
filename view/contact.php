@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./view/style/style.css">
     <script defer src="./view/js/app.js"></script>
     <script defer src="./view/js/functions.js"></script>
+    <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
     <title>Contact</title>
 </head>
 

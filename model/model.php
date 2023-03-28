@@ -82,6 +82,12 @@ function traiteLogin(){
     } else {return 3;}
 };
 
+function Userlogout(){
+    session_destroy();
+    header('Location: ../index.php?tag=account&action=logout');
+}
+
+
  function deleteUser($id) 
 {
     global $db;

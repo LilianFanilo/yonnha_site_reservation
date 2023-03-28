@@ -30,6 +30,13 @@ switch ($request_method) {
                 header ('Location:admin.php?err=login');
             }
         }
+
+        if (isset($_GET["action"])) {
+            $action = $_GET["action"];
+            if ($action === "logout") {
+                Userlogout();
+            }
+        }
     break;
     
     case 'POST':

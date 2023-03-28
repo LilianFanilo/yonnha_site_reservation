@@ -11,6 +11,7 @@
     <!-- lien vers le script JavaScript de Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="./view/style/style.css">
+    <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
     <title>Réservation</title>
 </head>
 

@@ -7,6 +7,7 @@ $array_POST = array();
 $request_method = $_SERVER["REQUEST_METHOD"];
 switch ($request_method) {
     case 'GET': 
+        var_dump($_SESSION);
         getUserBasket();
     break;
     
