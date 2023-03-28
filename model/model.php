@@ -132,29 +132,34 @@ function addBasket($array_POST){
 
     global $db;
     extract($array_POST);
-    $requete = $db->prepare('INSERT INTO basket (prix_total, nb_billets, date_visit, id_user) VALUES (:prix_total, :nb_billets, :date_visit, :id_user)');
+    $requete = $db->prepare('INSERT INTO basket (id_user, prix_total, nb_billets, date_visit, date_purchase) VALUES (:id_user, :prix_total, :nb_billets, :date_visit, NOW())');
+    $requete->bindValue(':id_user', $id_user, PDO::PARAM_INT);
     $requete->bindValue(':prix_total', $prix_total, PDO::PARAM_STR);
     $requete->bindValue(':nb_billets', $nb_billets, PDO::PARAM_STR);
-    $requete->bindValue(':date_visit', $date_visit, PDO::PARAM_INT);
-    $requete->bindValue(':id_user', $id_user, PDO::PARAM_INT);
+    $requete->bindValue(':date_visit', $date_visit, PDO::PARAM_STR);
     
-if ($requete->execute())
-{
-    $response=array(
-        'status' => 1,
-        'status_message' => 'Utilisateur ajoute avec succes.'
-    );
+    if ($requete->execute())
+    {
+        $response=array(
+            'status' => 1,
+            'status_message' => 'Reservation ajoute avec succes.'
+        );
+        header("Location: ../index.php?tag=reservation&action=succes");
+
+    }
+    else
+    {
+        $response = array (
+            'status' => 0,
+            'status_message' => 'ERREUR'
+        );
+        header("Location: ../index.php?tag=reservation&action=erreur");
+
+    }
+    header('Content-Type: application/json');
+    echo json_encode($response);
 }
-else
-{
-    $response = array (
-        'status' => 0,
-        'status_message' => 'ERREUR'
-    );
-}
-header('Content-Type: application/json');
-echo json_encode($response);
-}
+
 
 function deleteBasket($id) 
 {
@@ -221,31 +226,6 @@ function getPainting($id)
 {
     global $db;
     $requete = $db->prepare('SELECT * FROM painting WHERE id = :id');
-    $requete->bindValue(':id', $id, PDO::PARAM_INT);
-    $requete->execute();
-
-    $data = $requete->fetch(PDO::FETCH_ASSOC);
-    header('Content-Type: application/json');
-    echo json_encode($data, JSON_PRETTY_PRINT);
-
-}
-
-//* Billets
-
-function getBillets() 
-{
-    global $db;
-    $requete= $db -> prepare("SELECT * FROM billet");
-    $requete -> execute();
-    $data = $requete -> fetchAll(PDO::FETCH_OBJ);
-    header('Content-Type: application/json');
-    echo json_encode($data, JSON_PRETTY_PRINT);
-}
-
-function getBillet($id) 
-{
-    global $db;
-    $requete = $db->prepare('SELECT * FROM billet WHERE id = :id');
     $requete->bindValue(':id', $id, PDO::PARAM_INT);
     $requete->execute();
 

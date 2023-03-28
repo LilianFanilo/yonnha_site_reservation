@@ -11,9 +11,9 @@
     <title>Réservation</title>
 </head>
 <body>
-    <?php
+<?php
         include 'navbar.php';
-    ?>
+?>  
 
 <form action="./api/basket.php" method="POST">
 		<label for="date">Date :</label>
@@ -37,29 +37,48 @@
 		<input type="text" id="prix_total" name="prix_total" readonly><br><br>
 
 <?php if (isset($_SESSION['login'])) : ?>
-        <input type="submit" value="Réserver">
+        <input type="submit" value="Réserver">  
+        <input type="hidden" name="id_user" value="<?= $_SESSION["id"]?>">
         <input type="hidden" name="add_basket">
-<?php else : ?>
+        <?php else : ?>
         <a href="./index.php?tag=account&action=login">Connecter vous pour réserver !</a>
 <?php endif; ?>
 
 	</form>
-    <script>
-	flatpickr(".flatpickr", {
-		enableTime: false,
-		dateFormat: "Y-m-d",
-		minDate: "today",
-		locale: "fr",
-		inline: true
-	});
-</script>
 
-	<script>
-		function calculPrix() {
-			var nb_billets = parseInt(document.getElementById("nb_billets").value);
-			var prix_total = nb_billets * 15;
-			document.getElementById("prix_total").value = prix_total + " €";
-		}
-	</script>
+<?php
+        if(isset($_GET["action"])) :
+
+        $action = $_GET["action"];
+
+        if ($action === "succes") : 
+?>
+
+    <p>Réservation réussie</p>
+
+<?php
+    endif;
+    if ($action === "erreur") : 
+?>
+    <p>Erreur lors de la réservation</p>
+<?php
+    endif;
+    endif;
+?>
+<script>
+    flatpickr(".flatpickr", {
+    enableTime: false,
+    dateFormat: "Y-m-d",
+    minDate: "today",
+    locale: "fr",
+    inline: true
+});
+
+function calculPrix() {
+        var nb_billets = parseInt(document.getElementById("nb_billets").value);
+        var prix_total = nb_billets * 15;
+        document.getElementById("prix_total").value = prix_total + " €";
+    }
+</script>
 </body>
 </html>

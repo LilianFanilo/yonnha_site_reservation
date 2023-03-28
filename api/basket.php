@@ -18,18 +18,15 @@ switch ($request_method) {
     case 'POST':
 
         if (isset($_POST["add_basket"])) {
-
+            // Ajouter la valeur de la variable de session "id" dans le tableau $_POST
             $array_POST= array(
                 "date_visit" => $_POST["date_visit"],
                 "prix_total" => $_POST["prix_total"],
                 "nb_billets" => $_POST["nb_billets"],
-                "id_user" => ,
- 
+                "id_user" => $_POST["id_user"]
             );
-
             addBasket($array_POST);
             print_r($array_POST);
-
         }
 
         if (isset($_POST["delete_basket"])) {

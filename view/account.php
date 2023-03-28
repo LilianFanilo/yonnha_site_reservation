@@ -1,7 +1,6 @@
 <?php
     if(isset($_GET["action"])) :
-?>
-<?php
+        
         $action = $_GET["action"];
 
         if ($action === "login") : 
