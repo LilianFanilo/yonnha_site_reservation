@@ -154,11 +154,12 @@ function addBasket($array_POST){
 
     global $db;
     extract($array_POST);
-    $requete = $db->prepare('INSERT INTO basket (id_user, prix_total, nb_billets, date_visit, date_purchase) VALUES (:id_user, :prix_total, :nb_billets, :date_visit, NOW())');
+    $requete = $db->prepare('INSERT INTO basket (id_user, prix_total, nb_billets, date_visit, hour, date_purchase) VALUES (:id_user, :prix_total, :nb_billets, :date_visit, :hour, NOW())');
     $requete->bindValue(':id_user', $id_user, PDO::PARAM_INT);
     $requete->bindValue(':prix_total', $prix_total, PDO::PARAM_STR);
     $requete->bindValue(':nb_billets', $nb_billets, PDO::PARAM_STR);
     $requete->bindValue(':date_visit', $date_visit, PDO::PARAM_STR);
+    $requete->bindValue(':hour', $hour, PDO::PARAM_STR);
     
     if ($requete->execute())
     {

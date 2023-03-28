@@ -17,6 +17,7 @@ switch ($request_method) {
             // Ajouter la valeur de la variable de session "id" dans le tableau $_POST
             $array_POST= array(
                 "date_visit" => $_POST["date_visit"],
+                "hour" => $_POST["hour"],
                 "prix_total" => $_POST["prix_total"],
                 "nb_billets" => $_POST["nb_billets"],
                 "id_user" => $_POST["id_user"]
