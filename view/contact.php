@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./view/style/style.css">
+    <script defer src="./view/js/app.js"></script>
+    <script defer src="./view/js/functions.js"></script>
     <title>Contact</title>
 </head>
 
@@ -15,31 +17,53 @@
     ?>
     <section id="contact-first">
         <h1>Contactez-nous</h1>
-        <form action="/submit-form.php" method="post">
-            <div>
-                <label for="nom">Nom :</label><br>
-                <input type="text" id="nom" name="nom" required>
+            <div class="inner">
+
+                <form action="/submit-form.php" method="post">
+                    <h2>Formulaire</h3>
+                    <div>
+                        <span for="">Nom</span>
+                        <label class="form-group" for="nom">
+                        <span class="border"></span>
+                        <input type="text" id="nom" name="nom" class="form-control" required>
+                        </label>
+
+                    </div>
+                    <div>
+                        <span for="">Prénom</span>
+                        <label class="form-group" for="prenom">
+                        <span class="border"></span>
+                        <input type="text" id="prenom" name="prenom" class="form-control" required>
+                        </label>
+                    </div>
+                    <div>
+                        <span for="">Email</span>
+                        <label class="form-group" for="email">
+                        <span class="border"></span>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                        </label>
+                    </div>
+                    <div>
+                        <span for="">Téléphone</span>
+                        <label class="form-group" for="telephone">
+                        <span class="border"></span>
+                        <input type="tel" id="telephone" name="telephone" class="form-control">
+                        </label>
+                    </div>
+                    <div>
+                        <span for="">Message</span>
+                        <label class="form-group" for="message">
+                        <span class="border"></span>
+                        <textarea id="message" name="message" class="form-control" required>
+                        </textarea>
+                        </label>
+                            
+                    </div>
+                    <div>
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
-            <div>
-                <label for="prenom">Prénom :</label><br>
-                <input type="text" id="prenom" name="prenom" required>
-            </div>
-            <div>
-                <label for="email">Email :</label><br>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="telephone">Téléphone :</label><br>
-                <input type="tel" id="telephone" name="telephone">
-            </div>
-            <div>
-                <label for="message">Message :</label><br>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <div>
-                <button type="submit">Envoyer</button>
-            </div>
-        </form>
     </section>
 </body>
 
