@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require ('../model/model.php');
 
@@ -16,26 +17,7 @@ switch ($request_method) {
         break;
     
     case 'POST':
-        if (isset($_POST["add_artist"])) {
 
-            $array_POST= array(
-                "name" => $_POST["name"],
-                "date" => $_POST["date"],
-                "description" => $_POST["description"],
-                "img" => $_POST["img"],
-            );
-
-            addArtist($array_POST);
-            print_r($array_POST);
-
-        }
-
-        if (isset($_POST["delete_artist"])) {
-
-            $id = $_GET["id"];
-            deleteArtist($id);            
-
-        }
         break;
     
         default :

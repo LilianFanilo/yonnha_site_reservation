@@ -70,7 +70,7 @@ function traiteLogin(){
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         if (password_verify($_GET["pwd"],$result["pwd"])){
             $_SESSION["login"]=$_GET["login"];
-            $_SESSION["id"] = $result["id_user"];
+            $_SESSION["id"] = $result["id"];
             $_SESSION['is_admin'] = $result["is_admin"];
             return 1;
         } else {return 2;}
@@ -102,8 +102,97 @@ function traiteLogin(){
 
 
 
-
+function getUserBasket() 
+{
+    global $db;
+    $requete = $db->prepare("SELECT * FROM basket WHERE id_user=:id_user");
+    $requete->bindValue(':id_user', $_SESSION["id"], PDO::PARAM_INT);
+    $requete->execute();
+    $data = $requete->fetchAll(PDO::FETCH_OBJ);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+}
 //* Paniers
+
+function getBaskets() 
+{
+    global $db;
+    $requete= $db -> prepare("SELECT * FROM basket");
+    $requete -> execute();
+    $data = $requete -> fetchAll(PDO::FETCH_OBJ);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+}
+
+function getBasket($id) 
+{
+    global $db;
+    $requete = $db->prepare('SELECT * FROM basket WHERE id = :id');
+    $requete->bindValue(':id', $id, PDO::PARAM_INT);
+    $requete->execute();
+
+    $data = $requete->fetch(PDO::FETCH_ASSOC);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+
+}
+
+function addBasket($array_POST){
+
+    global $db;
+    extract($array_POST);
+    $requete = $db->prepare('INSERT INTO basket (id_user, prix_total, nb_billets, date_visit, date_purchase) VALUES (:id_user, :prix_total, :nb_billets, :date_visit, NOW())');
+    $requete->bindValue(':id_user', $id_user, PDO::PARAM_INT);
+    $requete->bindValue(':prix_total', $prix_total, PDO::PARAM_STR);
+    $requete->bindValue(':nb_billets', $nb_billets, PDO::PARAM_STR);
+    $requete->bindValue(':date_visit', $date_visit, PDO::PARAM_STR);
+    
+    if ($requete->execute())
+    {
+        $response=array(
+            'status' => 1,
+            'status_message' => 'Reservation ajoute avec succes.'
+        );
+        header("Location: ../index.php?tag=reservation&action=succes");
+
+    }
+    else
+    {
+        $response = array (
+            'status' => 0,
+            'status_message' => 'ERREUR'
+        );
+        header("Location: ../index.php?tag=reservation&action=erreur");
+
+    }
+    header('Content-Type: application/json');
+    echo json_encode($response);
+}
+
+
+function deleteBasket($id) 
+{
+    global $db;
+    $requete = $db->prepare('DELETE FROM personnages WHERE id = :id');
+    $requete->bindValue(':id', $id, PDO::PARAM_INT);
+    if ($requete->execute())
+    {
+        $response=array(
+            'status' => 1,
+            'status_message' => 'Utilisateur supprimé avec succès'
+        );
+    }
+    else
+    {
+        $response = array (
+            'status' => 0,
+            'status_message' => 'ERREUR'
+        );
+    }
+    header('Content-Type: application/json');
+    echo json_encode($response);
+}
+
 
 //* Artistes
 
@@ -130,58 +219,27 @@ function getArtist($id)
 
 }
 
-function addArtist($array_POST){
+//* Peintures
 
+function getPaintings() 
+{
     global $db;
-    extract($array_POST);
-    $requete = $db->prepare('INSERT INTO user (login, mail, name, surname, birthday, date_creation, pwd) VALUES (:login, :mail, :name, :surname, birthday, date_creation, pwd)');
-    $requete->bindValue(':login', $login, PDO::PARAM_STR);
-    $requete->bindValue(':mail', $mail, PDO::PARAM_STR);
-    $requete->bindValue(':name', $name, PDO::PARAM_STR);
-    $requete->bindValue(':surname', $surname, PDO::PARAM_STR);
-    $requete->bindValue(':birthday', $birthday, PDO::PARAM_STR);
-    $requete->bindValue(':date_creation', $date_creation, PDO::PARAM_INT);
-    $requete->bindValue(':pwd', $pwd, PDO::PARAM_INT);
-    
-if ($requete->execute())
-{
-    $response=array(
-        'status' => 1,
-        'status_message' => 'Utilisateur ajoute avec succes.'
-    );
-}
-else
-{
-    $response = array (
-        'status' => 0,
-        'status_message' => 'ERREUR'
-    );
-}
-header('Content-Type: application/json');
-echo json_encode($response);
+    $requete= $db -> prepare("SELECT * FROM painting");
+    $requete -> execute();
+    $data = $requete -> fetchAll(PDO::FETCH_OBJ);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
 }
 
-function deleteArtist($id) 
+function getPainting($id) 
 {
-global $db;
-$requete = $db->prepare('DELETE FROM personnages WHERE id = :id');
-$requete->bindValue(':id', $id, PDO::PARAM_INT);
-if ($requete->execute())
-{
-    $response=array(
-        'status' => 1,
-        'status_message' => 'Utilisateur supprimé avec succès'
-    );
-}
-else
-{
-    $response = array (
-        'status' => 0,
-        'status_message' => 'ERREUR'
-    );
-}
-header('Content-Type: application/json');
-echo json_encode($response);
-}
+    global $db;
+    $requete = $db->prepare('SELECT * FROM painting WHERE id = :id');
+    $requete->bindValue(':id', $id, PDO::PARAM_INT);
+    $requete->execute();
 
-//* Billets
+    $data = $requete->fetch(PDO::FETCH_ASSOC);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+
+}
