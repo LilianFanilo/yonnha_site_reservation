@@ -93,7 +93,7 @@ function Userlogout(){
  function deleteUser($id) 
 {
     global $db;
-    $requete = $db->prepare('DELETE FROM personnages WHERE id = :id');
+    $requete = $db->prepare('DELETE FROM user WHERE id = :id');
     $requete->bindValue(':id', $id, PDO::PARAM_INT);
     if ($requete->execute())
     {
@@ -113,6 +113,9 @@ function Userlogout(){
     }
     header('Content-Type: application/json');
     echo json_encode($response);
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: *");
+    header("Access-Control-Allow-Headers: *");
 }
 
 
