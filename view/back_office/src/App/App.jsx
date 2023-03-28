@@ -1,5 +1,5 @@
 import './App.css';
-import { UserTable } from '../component/UserTable/UserTable';
+import UserTable from '../component/UserTable/UserTable';
 
 export const App = () => {
   return (

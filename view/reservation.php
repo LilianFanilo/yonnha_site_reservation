@@ -28,10 +28,10 @@
         <br><br>
             <div class="ticket">
                 <div class="ticket-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc eget lorem dolor sed viverra ipsum nunc aliquet. Tristique nulla aliquet enim tortor at auctor. Magnis dis parturient montes </p>
+                    <p>Un billet pour un voyage vers à travers les tableaux d’impressionnistes</p>
                 </div>
                 <div class="ticket-price">
-                    <label for="nb_billets">Nombre de billets :</label>
+                    <label for="nb_billets">Nombre de billets:</label>
                     <select id="nb_billets" name="nb_billets" onchange="calculPrix()">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -44,7 +44,7 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                         <label for="prix_total">Prix total :</label>
-                        <input type="text" id="prix_total" name="prix_total" readonly><br><br>
+                        <input type="text" id="prix_total" name="prix_total" readonly>
                 </div>
             </div>
 
@@ -54,7 +54,7 @@
             <input type="hidden" name="id_user" value="<?= $_SESSION["id"] ?>">
             <input type="hidden" name="add_basket">
         <?php else : ?>
-            <a href="./index.php?tag=account&action=login">Connecter vous pour réserver !</a>
+            <a href="./index.php?tag=account&action=login">Connectez-vous pour réserver !</a>
         <?php endif; ?>
 </div>
         </form>

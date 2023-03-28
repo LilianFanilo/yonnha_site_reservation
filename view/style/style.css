@@ -193,10 +193,12 @@ address {
   top: 2em;
   content: "";
   display: block;
+  height: 2.5px;
   right: 50%;
   position: absolute;
   background: #CFAA5B;
   transition: width 0.3s ease 0s, right 0.7s ease 0s;
+  width: 0;
 }
 .nav-link:hover:after {
   width: 50%;
@@ -382,6 +384,51 @@ a {
   border-left: 2.5px solid #CFAA5B;
   border-bottom: 2.5px solid #CFAA5B;
 }
+#reservation-first form {
+  display: flex;
+  flex-direction: column;
+}
+
+.flatpickr-calendar {
+  font-size: 1em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: none;
+  width: 30em;
+}
+
+.flatpickr-innerContainer {
+  justify-content: center;
+}
+
+.flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+  height: 1em;
+  top: 10em;
+  color: #CFAA5B;
+  fill: #CFAA5B;
+}
+
+.flatpickr-months .flatpickr-prev-month svg, .flatpickr-months .flatpickr-next-month svg {
+  width: 2em;
+  height: 2em;
+}
+
+.flatpickr-months .flatpickr-month {
+  height: 5em;
+}
+
+.flatpickr-current-month {
+  top: 25%;
+  width: 80%;
+}
+
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay {
+  background: #CFAA5B;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  border-color: #CFAA5B;
+}
 
 #reservation-second {
   display: flex;
@@ -402,7 +449,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 100%;
   width: 60%;
   padding: 2em;
   background-color: rgba(207, 170, 91, 0.3254901961);
@@ -410,14 +457,15 @@ a {
 }
 #reservation-second .ticket .ticket-price {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: fit-content;
-  padding: 2em;
+  height: auto;
+  width: 40%;
+  padding: 5em;
   background-color: #FFFEF0;
   text-align: center;
+  border: 2px solid #CFAA5B;
 }
 
 /* ----------------------------- *

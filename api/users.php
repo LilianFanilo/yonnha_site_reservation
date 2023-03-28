@@ -1,8 +1,4 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: *");
-header("Access-Control-Allow-Headers: *");
-
 session_start();
 
 require ('../model/model.php');
@@ -12,7 +8,6 @@ $array_POST = array();
 $request_method = $_SERVER["REQUEST_METHOD"];
 switch ($request_method) {
     case 'GET':
-
         if (empty(isset($_GET["id"]))) {
             getUsers();
         } else {
@@ -56,9 +51,13 @@ switch ($request_method) {
 
         }
 
-    case "DELETE":
+        if (isset($_POST["delete_user"])) {
+
             $id = $_GET["id"];
-            deleteUser($id); 
+            deleteUser($id);            
+
+        }
+
         break;
     
         default :
