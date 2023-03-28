@@ -1,6 +1,13 @@
-RewriteEngine On # Activer le module Rewrite
+RewriteEngine On
+
+# correspond à "/users" pour renvoyer "users.php"
 RewriteRule ^users/?$ users.php [NC,L]
-RewriteRule ^[^/]+/(\d+)$ users.php?id=$1
-RewriteRule ^basket/?$ basket.php [NC,L]
+RewriteRule ^users/(\d+)$ users.php?id=$1 [NC,L]
+
+
+# correspond à "/artists/123" pour renvoyer "artists.php?id=123"
 RewriteRule ^artists/?$ artists.php [NC,L]
-RewriteRule ^[^/]+/(\d+)$ artists.php?id=$1
+RewriteRule ^artists/(\d+)$ artists.php?id=$1 [NC,L]
+
+# correspond à "/basket" pour renvoyer "basket.php"
+RewriteRule ^basket/?$ basket.php [NC,L]
