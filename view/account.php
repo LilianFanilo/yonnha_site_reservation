@@ -53,6 +53,22 @@
                         </ul>
                     </form>
                 </section>
+
+                <?php
+                    if (isset($_GET["result"])) :
+                        $result = $_GET["result"];
+                        if ($result === "succes") :
+                ?>
+                            <p>Enregistrement Réussi</p>
+                <?php
+                        endif;
+                        if ($result === "erreur") :
+                ?>
+                            <p>Erreur lors de l'enregistrement</p>
+                <?php
+                        endif;
+                    endif;
+                ?>
                 
             </body>
             <!-- <script src="script.js"></script> -->
@@ -99,7 +115,7 @@
 
                     <input type="hidden" name="add_user">                 
                 </form>
-                <a href="index.php?tag=account&action=log">Déjà un compte ? Connectez-vous !</a>
+                <a href="index.php?tag=account&action=login">Déjà un compte ? Connectez-vous !</a>
                 </section>
         </body>
         </html>

@@ -29,35 +29,40 @@
     }
 
     function addUser($array_POST){
-
         global $db;
         extract($array_POST);
-        $requete = $db->prepare('INSERT INTO user (login, mail, name, surname, birthday, date_creation, pwd) VALUES (:login, :mail, :name, :surname, birthday, date_creation, pwd)');
+        $now = date("Y-m-d H:i:s");
+        $requete = $db->prepare('INSERT INTO user (login, mail, name, surname, birthday, pwd, date_creation) VALUES (:login, :mail, :name, :surname, :birthday, :pwd, :date_creation)');
         $requete->bindValue(':login', $login, PDO::PARAM_STR);
         $requete->bindValue(':mail', $mail, PDO::PARAM_STR);
         $requete->bindValue(':name', $name, PDO::PARAM_STR);
         $requete->bindValue(':surname', $surname, PDO::PARAM_STR);
         $requete->bindValue(':birthday', $birthday, PDO::PARAM_STR);
-        $requete->bindValue(':date_creation', $date_creation, PDO::PARAM_INT);
-        $requete->bindValue(':pwd', $pwd, PDO::PARAM_INT);
+        $hash= password_hash($pwd,PASSWORD_DEFAULT);
+        $requete->bindParam(':pwd',$hash , PDO::PARAM_STR);
+        $requete->bindParam(':date_creation', $now, PDO::PARAM_STR);
         
-    if ($requete->execute())
-    {
-        $response=array(
-            'status' => 1,
-            'status_message' => 'Utilisateur ajoute avec succes.'
-        );
+        if ($requete->execute())
+        {
+            $response=array(
+                'status' => 1,
+                'status_message' => 'Utilisateur ajouté avec succès.'
+            );
+            header("Location: ../index.php?tag=account&action=login&result=succes");
+        }
+        else
+        {
+            $response = array (
+                'status' => 0,
+                'status_message' => 'ERREUR'
+            );
+            header("Location: ../index.php?tag=account&action=login&result=erreur");
+
+        }
+        header('Content-Type: application/json');
+        echo json_encode($response);
     }
-    else
-    {
-        $response = array (
-            'status' => 0,
-            'status_message' => 'ERREUR'
-        );
-    }
-    header('Content-Type: application/json');
-    echo json_encode($response);
-}
+    
 
 function traiteLogin(){
     global $db;
@@ -86,8 +91,9 @@ function traiteLogin(){
     {
         $response=array(
             'status' => 1,
-            'status_message' => 'Utilisateur supprimé avec succès'
+            'status_message' => 'Utilisateur supprime avec succes'
         );
+
     }
     else
     {
@@ -95,6 +101,7 @@ function traiteLogin(){
             'status' => 0,
             'status_message' => 'ERREUR'
         );
+
     }
     header('Content-Type: application/json');
     echo json_encode($response);

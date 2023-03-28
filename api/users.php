@@ -34,22 +34,18 @@ switch ($request_method) {
     
     case 'POST':
         if (isset($_POST["add_user"])) {
-
             $array_POST= array(
                 "login" => $_POST["login"],
                 "mail" => $_POST["mail"],
                 "name" => $_POST["name"],
                 "surname" => $_POST["surname"],
                 "birthday" => $_POST["birthday"],
-                "date_creation" => $_POST["date_creation"],
                 "pwd" => $_POST["pwd"]
- 
             );
-
             addUser($array_POST);
             print_r($array_POST);
-
         }
+    break;
 
         if (isset($_POST["delete_user"])) {
 
