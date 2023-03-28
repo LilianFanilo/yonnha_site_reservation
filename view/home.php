@@ -1,3 +1,23 @@
+<?php
+            $url = $api_url."/artists";
+
+            $curl = curl_init();
+            
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            
+            $response = curl_exec($curl);
+            
+            if($response === false){
+                $error = curl_error($curl);
+                curl_close($curl);
+                die("Erreur lors de l'appel à l'API : ".$error);
+            }
+            
+            $data = json_decode($response);
+            
+            curl_close($curl);
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -37,6 +57,17 @@
     <section id="home-fourth">
         <!-- slider2 -->
         <!-- slider3 artiste -->
+
+            <?php
+            // Utilisation des données récupérées
+            foreach($data as $artist) :
+            ?>
+        
+            <p><?= $artist -> name ?></p>
+        
+        <?php
+            endforeach;
+        ?>
     </section>
 <?php 
 include 'footer.php'
