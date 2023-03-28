@@ -102,7 +102,16 @@ function traiteLogin(){
 
 
 
-
+function getUserBasket() 
+{
+    global $db;
+    $requete = $db->prepare("SELECT * FROM basket WHERE id_user=:id_user");
+    $requete->bindValue(':id_user', $_SESSION["id"], PDO::PARAM_INT);
+    $requete->execute();
+    $data = $requete->fetchAll(PDO::FETCH_OBJ);
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+}
 //* Paniers
 
 function getBaskets() 

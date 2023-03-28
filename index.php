@@ -1,8 +1,7 @@
 <?php
 session_start();
 require "./model/model.php";
-$api_url = "http://localhost/yonnha_hope/api";
-
+$api_url="http://localhost/yonnha_site_reservation/api";
 if (isset($_GET['tag'])) 
 {
     $tag = $_GET['tag'];
@@ -30,6 +29,11 @@ if (isset($_GET['tag']))
     if ($tag === "logout") 
     {
         include './view/logout.php';
+    }
+
+    if ($tag === "basket") 
+    {
+        include './view/basket.php';
     }
 
     if ($tag === "gestion_panel") 
