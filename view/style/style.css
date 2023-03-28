@@ -102,7 +102,64 @@ address {
   max-height: 5em;
   padding-left: 1em;
 }
+.navbar .hamburger {
+  display: none;
+  cursor: pointer;
+}
+.navbar .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #CFAA5B;
+}
 
+@media screen and (max-width: 1020px) {
+  .navbar {
+    padding: 1em;
+  }
+  .navbar .container {
+    border-bottom: none;
+  }
+  .navbar img {
+    padding-left: 40%;
+  }
+  .navbar .hamburger {
+    display: block;
+    z-index: 9999;
+  }
+  .navbar .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar .nav-list {
+    position: fixed;
+    left: 50%;
+    top: -1000%;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    transition: 1s;
+    transform: translate(-50%, 0%);
+    background-color: #FFFEF0;
+    z-index: 1;
+  }
+  .navbar .nav-item {
+    margin: 0.5em 0;
+    background-color: #CFAA5B;
+  }
+  .navbar .nav-list.active {
+    top: 6em;
+    border-bottom: 2.5px solid #CFAA5B;
+  }
+}
 .container {
   display: flex;
   flex-direction: row-reverse;
@@ -136,12 +193,10 @@ address {
   top: 2em;
   content: "";
   display: block;
-  height: 2.5px;
   right: 50%;
   position: absolute;
   background: #CFAA5B;
   transition: width 0.3s ease 0s, right 0.7s ease 0s;
-  width: 0;
 }
 .nav-link:hover:after {
   width: 50%;
@@ -229,7 +284,7 @@ a {
 }
 
 /* ----------------------------- *
- *           GALLERIE            *
+ *           GALERIE            *
  * ----------------------------- */
 #gallery-first {
   display: flex;
@@ -306,6 +361,50 @@ a {
   right: 15em;
   z-index: 111;
   bottom: 43em;
+}
+
+/* ----------------------------- *
+ *          RESERVATION          *
+ * ----------------------------- */
+#reservation-first {
+  display: flex;
+}
+#reservation-first h1 {
+  position: relative;
+  top: 7em;
+  left: 3em;
+  padding: 0.5em;
+  height: fit-content;
+  font-size: 1.5em;
+  border-left: 2.5px solid #CFAA5B;
+  border-bottom: 2.5px solid #CFAA5B;
+}
+
+/* ----------------------------- *
+ *           CONTACT             *
+ * ----------------------------- */
+#contact-first {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 7em;
+}
+#contact-first h1 {
+  text-align: center;
+  font-size: 4em;
+  padding: 0.5em;
+}
+#contact-first h2 {
+  font-size: 2em;
+}
+#contact-first input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#contact-first textarea {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+/* ----------------------------- *
+ *          RESERVATION          *
+ * ----------------------------- */
+
+#reservation-first {
+display: flex;
+    h1 {
+        position: relative;
+        top: 7em;
+        left: 3em;
+        padding: .5em;
+        height: fit-content ;
+        font-size: 1.5em;
+        border-left: 2.5px solid $sec-color;
+        border-bottom: 2.5px solid $sec-color;
+
+
+    }
+}

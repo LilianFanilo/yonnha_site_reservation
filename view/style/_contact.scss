@@ -1,0 +1,35 @@
+/* ----------------------------- *
+ *           CONTACT             *
+ * ----------------------------- */
+
+ #contact-first {
+    @include center-row;
+    padding-top: 7em;
+
+    h1 {
+        text-align: center;
+        font-size: 4em;
+        padding: 0.5em;
+    }
+
+    h2 {
+        // text-align: center;
+        font-size: 2em;
+        // padding-bottom: 5%;
+
+    }
+    input {
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }    
+    textarea {
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    // a {
+    //     width: fit-content;
+    //     padding: 1em;
+    // }
+
+}
