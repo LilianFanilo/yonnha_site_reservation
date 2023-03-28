@@ -368,16 +368,56 @@ a {
  * ----------------------------- */
 #reservation-first {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #reservation-first h1 {
   position: relative;
-  top: 7em;
-  left: 3em;
+  bottom: 1em;
+  right: 22.5em;
   padding: 0.5em;
   height: fit-content;
   font-size: 1.5em;
   border-left: 2.5px solid #CFAA5B;
   border-bottom: 2.5px solid #CFAA5B;
+}
+
+#reservation-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#reservation-second .ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: fit-content;
+}
+#reservation-second .ticket .ticket-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 60%;
+  padding: 2em;
+  background-color: rgba(207, 170, 91, 0.3254901961);
+  text-align: center;
+}
+#reservation-second .ticket .ticket-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  padding: 2em;
+  background-color: #FFFEF0;
+  text-align: center;
 }
 
 /* ----------------------------- *
@@ -432,18 +472,27 @@ a {
   font-size: 1em;
   background: 0 0;
 }
-@media (max-width: 767px) {
-  #contact-first .inner {
-    padding: 27px 20px 37px;
-    border: none;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    -ms-box-shadow: none;
-    -o-box-shadow: none;
+
+@media (max-width: 1020px) {
+  #contact-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  #contact-first .wrapper {
-    background: #FDD1B8;
+  #contact-first h1 {
+    font-size: 3em;
+  }
+}
+@media (max-width: 400px) {
+  #contact-first .inner {
+    width: 90%;
+  }
+  #contact-first h1 {
+    font-size: 2em;
+  }
+  #contact-first h2 {
+    font-size: 1.5em;
   }
 }
 

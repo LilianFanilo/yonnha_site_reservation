@@ -17,26 +17,26 @@
 
     h2 {
         font-size: 1.5em;
-        padding-bottom:1em ;
+        padding-bottom: 1em;
 
     }
 
 
-.inner {
-    width: 25em;
-    background: #FDD1B8;
-    padding: 3em 3em 1.5em 3em;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-    -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-    -ms-box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-    -o-box-shadow: 0 0 10px 0 rgba(0,0,0,.2)
-}
+    .inner {
+        width: 25em;
+        background: #FDD1B8;
+        padding: 3em 3em 1.5em 3em;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+        -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+        -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+        -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2)
+    }
 
     a:hover {
         text-decoration: none
     }
-    
+
     :focus {
         outline: none
     }
@@ -45,11 +45,12 @@
         position: relative;
         display: block;
     }
+
     span {
         font-size: 0.7em;
         color: black;
 
-        }
+    }
 
 
     .form-control {
@@ -62,29 +63,43 @@
         background: 0 0;
 
     }
-    
+}
 
+@media(max-width: 1020px) {
+    #contact-first {
+        @include center-col;
 
+        h1 {
 
-    @media(max-width: 767px) {
-        .inner {
-            padding: 27px 20px 37px;
-            border: none;
-            box-shadow: none;
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            -ms-box-shadow: none;
-            -o-box-shadow: none
-        }
-    
-        .wrapper {
-            background: #FDD1B8;
+            font-size: 3em;
+
         }
     }
 
-    // a {
-    //     width: fit-content;
-    //     padding: 1em;
-    // }
 
 }
+
+@media(max-width: 400px) {
+    #contact-first {
+        .inner {
+            width: 90%;
+        }
+
+        h1 {
+
+            font-size: 2em;
+        }
+        h2 {
+
+            font-size: 1.5em;
+        }
+    }
+
+
+}
+
+
+// a {
+//     width: fit-content;
+//     padding: 1em;
+// }
