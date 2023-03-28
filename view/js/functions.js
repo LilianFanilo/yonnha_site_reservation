@@ -17,6 +17,20 @@ window.onscroll = function() {
   prevScrollpos = currentScrollpos;
 }
 
+const hamburger = document.querySelector(".hamburger");
+const navList = document.querySelector(".nav-list");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navList.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  hamburger.classList.remove("active");
+  
+}));
+
 $(document).ready(function(){
   $("#myButton").click(function(){
   var x = $("#myInput");

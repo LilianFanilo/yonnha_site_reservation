@@ -1,6 +1,11 @@
 <nav id="nav">
     <div class="navbar">
-        <img src="./images/logo-yonnha.png" alt="Logo link home">
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+        <img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOQAxoI6V3iXWBZIDNRi7CjDEDkFzFizAmOEJf0Z6I2gUQ8Gu0lXnjKr5iVuwLJ8E5oqupnTru4fqBH7Le1ghrNOs51I-g=w1920-h931" alt="Logo link home">
         <div class="container">
             <ul class="nav-list">
                 <li class="nav-item"><a href="./index.php" class="nav-link">Accueil</a></li>
@@ -20,5 +25,7 @@
                 <?php endif; ?>
             </ul>
         </div>
+
+</div>
     </div>
 </nav>
