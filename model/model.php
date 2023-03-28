@@ -13,6 +13,8 @@
         $data = $requete -> fetchAll(PDO::FETCH_OBJ);
         header('Content-Type: application/json');
         echo json_encode($data, JSON_PRETTY_PRINT);
+        header("Access-Control-Allow-Origin: *");
+
     }
 
     function getUser($id) 
@@ -25,6 +27,8 @@
         $data = $requete->fetch(PDO::FETCH_ASSOC);
         header('Content-Type: application/json');
         echo json_encode($data, JSON_PRETTY_PRINT);
+        header("Access-Control-Allow-Origin: *");
+
 
     }
 
@@ -80,7 +84,7 @@ function traiteLogin(){
  function deleteUser($id) 
 {
     global $db;
-    $requete = $db->prepare('DELETE FROM personnages WHERE id = :id');
+    $requete = $db->prepare('DELETE FROM user WHERE id = :id');
     $requete->bindValue(':id', $id, PDO::PARAM_INT);
     if ($requete->execute())
     {
@@ -98,6 +102,9 @@ function traiteLogin(){
     }
     header('Content-Type: application/json');
     echo json_encode($response);
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: *");
+    header("Access-Control-Allow-Headers: *");
 }
 
 
