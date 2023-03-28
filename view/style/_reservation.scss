@@ -1,4 +1,44 @@
-.hide-input {
-    position: absolute;
-    left: -9999px;
-}
+/* ----------------------------- *
+ *          RESERVATION          *
+ * ----------------------------- */
+
+ #reservation-first {
+    @include center-col;
+        h1 {
+            position: relative;
+            bottom: 1em;
+            right: 22.5em;
+            padding: .5em;
+            height: fit-content ;
+            font-size: 1.5em;
+            border-left: 2.5px solid $sec-color;
+            border-bottom: 2.5px solid $sec-color;
+    
+    
+        }
+    }
+    #reservation-second {
+        @include center-col;
+        .ticket {
+            @include center-row;
+            width: 70%;
+            height: fit-content;
+
+            .ticket-text {
+                @include center-row;
+                height: auto;
+                width:60%;
+                padding: 2em;
+                background-color: #cfaa5b53;
+                text-align: center;
+            }            
+            .ticket-price {
+                @include center-row;
+                height: 100%;
+                width:fit-content;
+                padding: 2em;
+                background-color: $main-color;
+                text-align: center;
+            }
+        }
+        }

@@ -102,7 +102,64 @@ address {
   max-height: 5em;
   padding-left: 1em;
 }
+.navbar .hamburger {
+  display: none;
+  cursor: pointer;
+}
+.navbar .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #CFAA5B;
+}
 
+@media screen and (max-width: 1020px) {
+  .navbar {
+    padding: 1em;
+  }
+  .navbar .container {
+    border-bottom: none;
+  }
+  .navbar img {
+    padding-left: 40%;
+  }
+  .navbar .hamburger {
+    display: block;
+    z-index: 9999;
+  }
+  .navbar .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar .nav-list {
+    position: fixed;
+    left: 50%;
+    top: -1000%;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    transition: 1s;
+    transform: translate(-50%, 0%);
+    background-color: #FFFEF0;
+    z-index: 1;
+  }
+  .navbar .nav-item {
+    margin: 0.5em 0;
+    background-color: #CFAA5B;
+  }
+  .navbar .nav-list.active {
+    top: 6em;
+    border-bottom: 2.5px solid #CFAA5B;
+  }
+}
 .container {
   display: flex;
   flex-direction: row-reverse;
@@ -136,12 +193,10 @@ address {
   top: 2em;
   content: "";
   display: block;
-  height: 2.5px;
   right: 50%;
   position: absolute;
   background: #CFAA5B;
   transition: width 0.3s ease 0s, right 0.7s ease 0s;
-  width: 0;
 }
 .nav-link:hover:after {
   width: 50%;
@@ -229,7 +284,7 @@ a {
 }
 
 /* ----------------------------- *
- *           GALLERIE            *
+ *           GALERIE            *
  * ----------------------------- */
 #gallery-first {
   display: flex;
@@ -308,9 +363,137 @@ a {
   bottom: 43em;
 }
 
-.hide-input {
-  position: absolute;
-  left: -9999px;
+/* ----------------------------- *
+ *          RESERVATION          *
+ * ----------------------------- */
+#reservation-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#reservation-first h1 {
+  position: relative;
+  bottom: 1em;
+  right: 22.5em;
+  padding: 0.5em;
+  height: fit-content;
+  font-size: 1.5em;
+  border-left: 2.5px solid #CFAA5B;
+  border-bottom: 2.5px solid #CFAA5B;
+}
+
+#reservation-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#reservation-second .ticket {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: fit-content;
+}
+#reservation-second .ticket .ticket-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 60%;
+  padding: 2em;
+  background-color: rgba(207, 170, 91, 0.3254901961);
+  text-align: center;
+}
+#reservation-second .ticket .ticket-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  padding: 2em;
+  background-color: #FFFEF0;
+  text-align: center;
+}
+
+/* ----------------------------- *
+ *           CONTACT             *
+ * ----------------------------- */
+#contact-first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 7em;
+}
+#contact-first h1 {
+  text-align: center;
+  font-size: 4em;
+  padding: 0.5em;
+}
+#contact-first h2 {
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
+#contact-first .inner {
+  width: 25em;
+  background: #FDD1B8;
+  padding: 3em 3em 1.5em 3em;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+#contact-first a:hover {
+  text-decoration: none;
+}
+#contact-first :focus {
+  outline: none;
+}
+#contact-first .form-group {
+  position: relative;
+  display: block;
+}
+#contact-first span {
+  font-size: 0.7em;
+  color: black;
+}
+#contact-first .form-control {
+  border: none;
+  border-bottom: 2px solid #CFAA5B;
+  display: block;
+  width: 100%;
+  height: 43px;
+  font-size: 1em;
+  background: 0 0;
+}
+
+@media (max-width: 1020px) {
+  #contact-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #contact-first h1 {
+    font-size: 3em;
+  }
+}
+@media (max-width: 400px) {
+  #contact-first .inner {
+    width: 90%;
+  }
+  #contact-first h1 {
+    font-size: 2em;
+  }
+  #contact-first h2 {
+    font-size: 1.5em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -24,8 +24,76 @@
       max-height: 5em;
       padding-left: 1em;
     }
+  .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+  .bar {
+    display:block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease-in-out ;
+    transition: all 0.3s ease-in-out;
+    background-color: $sec-color;
+  }
   }
   
+  @media screen and (max-width: 1020px)  {
+   
+   .navbar { 
+    padding: 1em;
+    .container {
+      border-bottom: none;
+
+    }
+    img {
+      padding-left: 40%;
+    }
+    .hamburger {
+    display: block;
+    z-index: 9999;
+    
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }  
+  .hamburger.active .bar:nth-child(1){
+transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+      }
+    
+  .nav-list {
+    position: fixed;
+    left: 50%;
+    top: -1000%;
+    flex-direction: column;  
+    width: 90%;
+    text-align: center;
+    transition: 1s;
+    transform: translate(-50%, 0%);
+    background-color: $main-color;
+    z-index: 1;
+
+  }
+    .nav-item {
+      margin: 0.5em 0;
+      background-color: $sec-color;
+
+    
+    }
+
+    .nav-list.active {
+      top: 6em;
+      border-bottom: 2.5px solid $sec-color;
+    }
+  }
+}
+
+
 
   .container {
     display: flex;
@@ -62,12 +130,10 @@
       top: 2em;
       content: "";
       display: block;
-      height: 2.5px;
       right: 50%;
       position: absolute;
       background: $sec-color;
       transition: width 0.3s ease 0s, right 0.7s ease 0s;
-      width: 0;
     }
   
     &:hover:after {
@@ -76,5 +142,35 @@
     }
   }
   
-
+  
+  // @media screen and (max-width: 1000px) {
+  //   .container {
+  //   display: none;
+  //   }
+  //   .navbar {
+  //   position: relative;
+  //   }
+  //   .nav-list {
+  //   position: absolute;
+  //   top: 0;
+  //   left: -100%;
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //   background-color: transparent;
+  //   transition: left 0.5s ease-in-out;
+  //   }
+  //   .nav-item {
+  //   padding: 1em;
+  //   }
+  //   .nav-link {
+  //   font-size: 1.5em;
+  //   }
+  //   .navbar.active .nav-list {
+  //   left: 0;
+  //   }
+  //   }
   
