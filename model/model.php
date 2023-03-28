@@ -13,6 +13,7 @@
         $data = $requete -> fetchAll(PDO::FETCH_OBJ);
         header('Content-Type: application/json');
         echo json_encode($data, JSON_PRETTY_PRINT);
+        header("Access-Control-Allow-Origin: *");
     }
 
     function getUser($id) 
@@ -24,7 +25,8 @@
 
         $data = $requete->fetch(PDO::FETCH_ASSOC);
         header('Content-Type: application/json');
-        echo json_encode($data, JSON_PRETTY_PRINT);
+        echo json_encode($data, JSON_PRETTY_PRINT);        
+        header("Access-Control-Allow-Origin: *");
 
     }
 
