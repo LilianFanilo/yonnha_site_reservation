@@ -10,6 +10,7 @@ switch ($request_method) {
     if (empty(isset($_GET["id"]))) {
         getBaskets();
     } else {
+        $id = $_GET["id"];
         getBasket($id);
     }
 

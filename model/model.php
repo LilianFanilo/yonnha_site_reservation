@@ -145,11 +145,10 @@ function getBaskets()
 function getBasket($id) 
 {
     global $db;
-    $requete = $db->prepare('SELECT * FROM basket WHERE id = :id');
+    $requete = $db->prepare('SELECT * FROM basket WHERE id_user = :id ORDER BY date_visit DESC');
     $requete->bindValue(':id', $id, PDO::PARAM_INT);
     $requete->execute();
-
-    $data = $requete->fetch(PDO::FETCH_ASSOC);
+    $data = $requete->fetchAll(PDO::FETCH_ASSOC);
     header('Content-Type: application/json');
     echo json_encode($data, JSON_PRETTY_PRINT);
 
@@ -237,3 +236,4 @@ function getArtist($id)
     echo json_encode($data, JSON_PRETTY_PRINT);
 
 }
+
