@@ -1,0 +1,45 @@
+/* ----------------------------- *
+ *     DISPOSITIF INTERACTIF     *
+ * ----------------------------- */
+
+
+#dispo-first {
+    @include center-col;
+    font-size: 4em;
+}
+
+#dispo-second {
+    @include center-col;
+    font-family: 'JOSEFINS';
+    font-size: 1.5em;
+    .content {
+           width: 80%; 
+
+        .top {
+            @include center-row;
+
+            img {
+                width: 30%;
+            }
+
+            .top-col {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding:0 1em 0 1em;
+                width: 100%;
+                img {
+                    padding-top: 1em;
+                    padding-left: 3em;
+                    width: 70%;
+
+                }
+            }
+        }
+        .bottom {
+            padding: 1em 0 1em 0;
+            width: 100%;
+
+        }
+    }
+}

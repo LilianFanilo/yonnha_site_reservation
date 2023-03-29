@@ -100,7 +100,7 @@ curl_close($curl);
     </section>
     <section id="home-third">
         <p>Une exposition sur l’impressionnisme ça te dit ? Et si l’expo était dans ton téléphone ? Ok, laisse moi t’expliquer… Imagine que tu n’aies qu’à ouvrir une application pour plonger dans l’univers de l’impressionnisme. Bienvenu(e) dans un futur où tout est possible. Tu peux découvrir cette exposition interactive grâce à un dispositif qu’on appelle “?”.</p>
-        <a href="">Voir le dispositif intéractif</a>
+        <a href="index.php?tag=dispositif">Voir le dispositif intéractif</a>
     </section>
     <section id="home-fourth">
         <!-- slider2 -->

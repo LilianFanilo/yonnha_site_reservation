@@ -1,8 +1,10 @@
+/* ----------------------------- *
+ *            GALLERY            *
+ * ----------------------------- */
+
+
 #gallery-first {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  @include center-col;
   
     h1 {
       text-align: center;
@@ -11,16 +13,14 @@
   }
   
   #gallery-second {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include center-col;
+
     height: fit-content;
   
     .one {
       height: 20em;
       width: 38em;
-      border: 2.5px solid #CFAA5B;
+      border: 2.5px solid $sec-color;
       position: relative;
       left: 12em;
       width: auto;
@@ -37,7 +37,7 @@
     .two {
       height: 38em;
       width: 25em;
-      border: 2.5px solid #CFAA5B;
+      border: 2.5px solid $sec-color;
       position: relative;
       width: auto;
       z-index: 99;
@@ -56,7 +56,7 @@
     .three {
       height: 38em;
       width: 25em;
-      border: 2.5px solid #CFAA5B;
+      border: 2.5px solid $sec-color;
       position: relative;
       width: auto;
       height: 20em;
@@ -75,7 +75,7 @@
     .four {
       height: 38em;
       width: 25em;
-      border: 2.5px solid #CFAA5B;
+      border: 2.5px solid $sec-color;
       position: relative;
       width: auto;
       height: 25em;
@@ -94,7 +94,7 @@
     .five {
       height: 20em;
       width: 38em;
-      border: 2.5px solid #CFAA5B;
+      border: 2.5px solid $sec-color;
       position: relative;
       width: auto;
       left: 8em;
@@ -113,7 +113,7 @@
     .six {
       height: 38em;
       width: 25em;
-      border: 2.5px solid #CFAA5B;
+      border: 2.5px solid $sec-color;
       position: relative;
       width: auto;
       height: 25em;
@@ -132,7 +132,7 @@
     .seven {
       height: 38em;
       width: 25em;
-      border: 2.5px solid #CFAA5B;
+      border: 2.5px solid $sec-color;
       position: relative;
       width: auto;
       height: 25em;
@@ -171,7 +171,7 @@
         width: fit-content;
         padding: 2em 0.2em 2em 2em;
         margin: 13em 7em 10em;
-        border: 2px solid #CFAA5B;
+        border: 2px solid $sec-color;
   
         .paint {
           display: flex;
@@ -215,7 +215,7 @@
   
             .short {
               font-size: 1.5em;
-              color: #CFAA5B;
+              color: $sec-color;
             }
   
             .story {
@@ -239,7 +239,7 @@
           margin: 5px;
           -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-          background-color: #CFAA5B;
+          background-color: $sec-color;
         }
   
         .e1 .bar {
@@ -285,7 +285,7 @@
         width: fit-content;
         padding: 2em 0.2em 2em 2em;
         margin: 13em 7em 10em;
-        border: 2px solid #CFAA5B;
+        border: 2px solid $sec-color;
   
         .paint {
           display: flex;
@@ -329,7 +329,7 @@
   
             .short {
               font-size: 1.5em;
-              color: #CFAA5B;
+              color: $sec-color;
             }
   
             .story {
@@ -353,7 +353,7 @@
           margin: 5px;
           -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-          background-color: #CFAA5B;
+          background-color: $sec-color;
         }
   
         .e2 .bar {
@@ -399,7 +399,7 @@
         width: fit-content;
         padding: 2em 0.2em 2em 2em;
         margin: 13em 7em 10em;
-        border: 2px solid #CFAA5B;
+        border: 2px solid $sec-color;
   
         .paint {
           display: flex;
@@ -443,7 +443,7 @@
   
             .short {
               font-size: 1.5em;
-              color: #CFAA5B;
+              color: $sec-color;
             }
   
             .story {
@@ -467,7 +467,7 @@
           margin: 5px;
           -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-          background-color: #CFAA5B;
+          background-color: $sec-color;
         }
   
         .e3 .bar {
@@ -513,7 +513,7 @@
         width: fit-content;
         padding: 2em 0.2em 2em 2em;
         margin: 13em 7em 10em;
-        border: 2px solid #CFAA5B;
+        border: 2px solid $sec-color;
   
         .paint {
           display: flex;
@@ -557,7 +557,7 @@
   
             .short {
               font-size: 1.5em;
-              color: #CFAA5B;
+              color: $sec-color;
             }
   
             .story {
@@ -581,7 +581,7 @@
           margin: 5px;
           -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-          background-color: #CFAA5B;
+          background-color: $sec-color;
         }
   
         .e4 .bar {
@@ -627,7 +627,7 @@
         width: fit-content;
         padding: 2em 0.2em 2em 2em;
         margin: 13em 7em 10em;
-        border: 2px solid #CFAA5B;
+        border: 2px solid $sec-color;
   
         .paint {
           display: flex;
@@ -671,7 +671,7 @@
   
             .short {
               font-size: 1.5em;
-              color: #CFAA5B;
+              color: $sec-color;
             }
   
             .story {
@@ -695,7 +695,7 @@
           margin: 5px;
           -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-          background-color: #CFAA5B;
+          background-color: $sec-color;
         }
   
         .e5 .bar {
@@ -741,7 +741,7 @@
         width: fit-content;
         padding: 2em 0.2em 2em 2em;
         margin: 13em 7em 10em;
-        border: 2px solid #CFAA5B;
+        border: 2px solid $sec-color;
   
         .paint {
           display: flex;
@@ -785,7 +785,7 @@
   
             .short {
               font-size: 1.5em;
-              color: #CFAA5B;
+              color: $sec-color;
             }
   
             .story {
@@ -809,7 +809,7 @@
           margin: 5px;
           -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-          background-color: #CFAA5B;
+          background-color: $sec-color;
         }
   
         .e6 .bar {
@@ -855,7 +855,7 @@
         width: fit-content;
         padding: 2em 0.2em 2em 2em;
         margin: 13em 7em 10em;
-        border: 2px solid #CFAA5B;
+        border: 2px solid $sec-color;
   
         .paint {
           display: flex;
@@ -899,7 +899,7 @@
   
             .short {
               font-size: 1.5em;
-              color: #CFAA5B;
+              color: $sec-color;
             }
   
             .story {
@@ -923,7 +923,7 @@
           margin: 5px;
           -webkit-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
-          background-color: #CFAA5B;
+          background-color: $sec-color;
         }
   
         .e7 .bar {
