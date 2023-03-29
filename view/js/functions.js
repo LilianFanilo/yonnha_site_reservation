@@ -40,5 +40,3 @@ painting.addEventListener("click", function() {
 cross.addEventListener("click", function() {
   popup_container.classList.toggle("active")
 });
-
-
