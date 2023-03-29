@@ -31,6 +31,18 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   
 }));
 
+let painting = document.querySelector(".painting");
+let popup_container = document.querySelector(".popup-container");
+let cross = document.querySelector(".cross");
+painting.addEventListener("click", function() {
+    popup_container.classList.toggle("active")
+})
+cross.addEventListener("click", function() {
+  popup_container.classList.toggle("active")
+});
+
+
+
 $(document).ready(function(){
   $("#myButton").click(function(){
   var x = $("#myInput");

@@ -298,11 +298,6 @@ a {
   text-align: center;
   font-size: 4em;
 }
-#gallery-first h2 {
-  text-align: center;
-  font-size: 2em;
-  padding-bottom: 5%;
-}
 
 #gallery-second {
   display: flex;
@@ -363,6 +358,101 @@ a {
   right: 15em;
   z-index: 111;
   bottom: 43em;
+}
+#gallery-second .popup-container {
+  font-family: "JOSEFINS";
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.823);
+  display: flex;
+  z-index: 990;
+  display: none;
+}
+#gallery-second .popup-container .popup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90%;
+  width: fit-content;
+  padding: 2em;
+  margin: 7em;
+  border: 2px solid #CFAA5B;
+}
+#gallery-second .popup-container .popup .paint {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  height: 100%;
+  width: 50%;
+}
+#gallery-second .popup-container .popup .paint img {
+  height: auto;
+  width: 100%;
+  padding-bottom: 2em;
+}
+#gallery-second .popup-container .popup .paint .context {
+  height: 100%;
+  font-size: 1.1em;
+}
+#gallery-second .popup-container .popup .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  height: 100%;
+}
+#gallery-second .popup-container .popup .text h2 {
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 5%;
+  font-family: "TAN-PEARL";
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+#gallery-second .popup-container .popup .text .title {
+  height: 100%;
+  padding-left: 3em;
+}
+#gallery-second .popup-container .popup .text .title .short {
+  font-size: 1.5em;
+  color: #CFAA5B;
+}
+#gallery-second .popup-container .popup .text .title .story {
+  font-size: 1.2em;
+}
+#gallery-second .popup-container .popup .cross {
+  display: block;
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+  bottom: 47%;
+}
+#gallery-second .popup-container .popup .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #CFAA5B;
+}
+#gallery-second .popup-container .popup .cross .bar:nth-child(2) {
+  opacity: 0;
+}
+#gallery-second .popup-container .popup .cross .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#gallery-second .popup-container .popup .cross .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+#gallery-second .popup-container.active {
+  display: flex;
 }
 
 /* ----------------------------- *
