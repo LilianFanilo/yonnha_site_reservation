@@ -11,6 +11,19 @@
     align-items: center;
 }
 
+@mixin center-col-e{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@mixin center-row-e{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 @mixin horizontal {
     height: 20em;
     width: 38em;

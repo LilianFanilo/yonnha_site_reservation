@@ -7,7 +7,6 @@
 
     h1 {
         position: relative;
-        bottom: 1em;
         right: 22.5em;
         padding: .5em;
         height: fit-content;
@@ -20,8 +19,6 @@
         flex-direction:column ;
     }
 }
-
-
 
 .flatpickr-calendar {
 
@@ -70,7 +67,7 @@
 }
 
 #reservation-second {
-    @include center-col;
+    @include center-col-e;
 
     .ticket {
         @include center-row;
@@ -96,5 +93,24 @@
             text-align: center;
             border: 2px solid $sec-color;
         }
+    }
+
+    .ticket-button {
+        a {
+            padding: 1em;
+            border: solid 2px $sec-color;
+
+        }
+    }
+    .popup-status {
+        display: block;
+        color: black;
+        position: fixed;
+        height: 10em;
+        width: 20em;
+        top: 34em;
+        right: 2em;
+        border-radius: 20px;
+        background-color: $sec-color;
     }
 }

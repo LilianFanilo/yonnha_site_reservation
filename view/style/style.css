@@ -361,8 +361,7 @@ a {
 }
 #gallery-second .popup-container {
   font-family: "JOSEFINS";
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 100vh;
   width: 100%;
@@ -713,7 +712,6 @@ a {
 }
 #reservation-first h1 {
   position: relative;
-  bottom: 1em;
   right: 22.5em;
   padding: 0.5em;
   height: fit-content;
@@ -770,7 +768,7 @@ a {
 #reservation-second {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 #reservation-second .ticket {
@@ -803,6 +801,21 @@ a {
   background-color: #FFFEF0;
   text-align: center;
   border: 2px solid #CFAA5B;
+}
+#reservation-second .ticket-button a {
+  padding: 1em;
+  border: solid 2px #CFAA5B;
+}
+#reservation-second .popup-status {
+  display: block;
+  color: black;
+  position: fixed;
+  height: 10em;
+  width: 20em;
+  top: 34em;
+  right: 2em;
+  border-radius: 20px;
+  background-color: #CFAA5B;
 }
 
 /* ----------------------------- *

@@ -28,59 +28,59 @@
             <input type="time" id="hour" name="hour" min="10:00" max="18:00" required onchange="checkHeure()">
     </section>
     <section id="reservation-second">
-        <br><br>
-            <div class="ticket">
-                <div class="ticket-text">
-                    <p>Un billet pour un voyage vers à travers les tableaux d’impressionnistes</p>
-                </div>
-                <div class="ticket-price">
-                    <label for="nb_billets">Nombre de billets:</label>
-                    <select id="nb_billets" name="nb_billets" onchange="calculPrix()">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <label for="prix_total">Prix total :</label>
-                        <input type="text" id="prix_total" name="prix_total" readonly>
-                </div>
+        <div class="ticket">
+            <div class="ticket-text">
+                <p>Un billet pour un voyage vers à travers les tableaux d’impressionnistes</p>
             </div>
+            <div class="ticket-price">
+                <label for="nb_billets">Nombre de billets:</label>
+                <select id="nb_billets" name="nb_billets" onchange="calculPrix()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <label for="prix_total">Prix total :</label>
+                    <input type="text" id="prix_total" name="prix_total" readonly>
+            </div>
+        </div>
 
-<div ticket-button>
-        <?php if (isset($_SESSION['login'])) : ?>
-            <input type="submit" value="Réserver">
-            <input type="hidden" name="id_user" value="<?= $_SESSION["id"] ?>">
-            <input type="hidden" name="add_basket">
-        <?php else : ?>
-            <a href="./index.php?tag=account&action=login">Connectez-vous pour réserver !</a>
-        <?php endif; ?>
-</div>
+        <div class="ticket-button">
+            <?php if (isset($_SESSION['login'])) : ?>
+                <input type="submit" value="Réserver">
+                <input type="hidden" name="id_user" value="<?= $_SESSION["id"] ?>">
+                <input type="hidden" name="add_basket">
+            <?php else : ?>
+                <a href="./index.php?tag=account&action=login">Connectez-vous pour réserver !</a>
+            <?php endif; ?>
+        </div>
         </form>
-
-        <?php
-        if (isset($_GET["action"])) :
-
-            $action = $_GET["action"];
-
-            if ($action === "succes") :
-        ?>
-
-                <p>Réservation réussie</p>
-
+        <div class="popup-status">
             <?php
-            endif;
-            if ($action === "erreur") :
+            if (isset($_GET["action"])) :
+
+                $action = $_GET["action"];
+
+                if ($action === "succes") :
             ?>
-                <p>Erreur lors de la réservation</p>
-        <?php
+
+                    <p>Réservation réussie</p>
+
+                <?php
+                endif;
+                if ($action === "erreur") :
+                ?>
+                    <p>Erreur lors de la réservation</p>
+            <?php
+                endif;
             endif;
-        endif;
-        ?>
+            ?>
+        </div>
     </section>
 
     <script>
@@ -99,13 +99,13 @@
         }
 
         function checkHeure() {
-        var heure = document.getElementById("hour").value;
-        var min = document.getElementById("hour").min;
-        var max = document.getElementById("hour").max;
-        if (heure < min || heure > max) {
-            alert("Veuillez sélectionner une heure entre 10h et 18h.");
-            document.getElementById("hour").value = "";
-        }
+            var heure = document.getElementById("hour").value;
+            var min = document.getElementById("hour").min;
+            var max = document.getElementById("hour").max;
+            if (heure < min || heure > max) {
+                alert("Veuillez sélectionner une heure entre 10h et 18h.");
+                document.getElementById("hour").value = "";
+            }
         }
     </script>
 </body>
