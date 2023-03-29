@@ -9,15 +9,15 @@ $request_method = $_SERVER["REQUEST_METHOD"];
 switch ($request_method) {
     case 'GET':
         if (empty(isset($_GET["id"]))) {
-            getArtists();
+            getPaintings();
         } else {
             $id = $_GET["id"];
-            getArtist($id);
+            getPainting($id);
         }
-        break;
+    break;
     
     case 'POST':
-
+        
         break;
     
         default :

@@ -14,12 +14,12 @@
                 <li class="nav-item"><a href="./index.php?tag=contact" class="nav-link">Contact</a></li>
                 <div class="active"></div>
                 <?php if (!isset($_SESSION['login'])) : ?>
-                    <li class="nav-item"><a href="./index.php?tag=account&action=login" class="nav-link">Login</a></li>
-                    <li class="nav-item"><a href="./index.php?tag=account&action=signup" class="nav-link">Signup</a></li>
+                    <li class="nav-item"><a href="./index.php?tag=account&action=login" class="nav-link">Connexion</a></li>
+                    <li class="nav-item"><a href="./index.php?tag=account&action=signup" class="nav-link">Inscription</a></li>
                 <?php endif; ?>
                 <?php if (isset($_SESSION['login'])) : ?>
                     <?php if ($_SESSION['is_admin'] == true) : ?>
-                        <li class="nav-item"><a href="./view/back_office/build/index.html" class="nav-link">Panneau de gestion</a></li>
+                        <li class="nav-item"><a href="./index.php?tag=gestion_panel" class="nav-link">Panneau de gestion</a></li>
                     <?php endif; ?>
                     <li class="nav-item"><a href="./index.php?tag=basket" class="nav-link">Panier</a></li>
                     <li class="nav-item"><a href="./api/users.php?action=logout" class="nav-link">Déconnexion</a></li>

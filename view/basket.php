@@ -1,6 +1,3 @@
-<?php
-    $id= $_SESSION["id"];
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,7 +13,7 @@
         include 'navbar.php';
 
 //récupération des données de l'api => ici users
-$url = $api_url."/baskets/{$id}";
+$url = $api_url."/basket";
 
 $curl = curl_init();
 
@@ -33,15 +30,18 @@ if($response === false){
 
 $data = json_decode($response);
 
+echo $response;
+
 curl_close($curl);
 
+var_dump($response);
 ?>
 
 <?php if(!empty($data)): ?>
     <table>
         <thead>
             <tr>
-                <th>Date de réservation</th>
+                <th>Date de visite</th>
                 <th>Nombre de billets</th>
                 <th>Prix total</th>
             </tr>

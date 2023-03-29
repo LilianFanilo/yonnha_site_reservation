@@ -1,116 +1,128 @@
 /* ----------------------------- *
  *          RESERVATION          *
  * ----------------------------- */
-
-#reservation-first {
-    @include center-col;
-
+ #reservation-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
     h1 {
-        position: relative;
-        right: 22.5em;
-        padding: .5em;
-        height: fit-content;
-        font-size: 1.5em;
-        border-left: 2.5px solid $sec-color;
-        border-bottom: 2.5px solid $sec-color;
+      position: relative;
+      right: 22.5em;
+      padding: 0.5em;
+      height: fit-content;
+      font-size: 1.5em;
+      border-left: 2.5px solid #CFAA5B;
+      border-bottom: 2.5px solid #CFAA5B;
     }
+  
     form {
-        display: flex;
-        flex-direction:column ;
+      display: flex;
+      flex-direction: column;
     }
-}
-
-.flatpickr-calendar {
-
+  }
+  
+  .flatpickr-calendar {
     font-size: 1em;
     -webkit-box-shadow: none;
     box-shadow: none;
     background: none;
     width: 30em;
-
-}
-
-.flatpickr-innerContainer {
-
+  }
+  
+  .flatpickr-innerContainer {
     justify-content: center;
-
-}
-
-.flatpickr-months .flatpickr-prev-month,.flatpickr-months .flatpickr-next-month {
-    height: 1em;
-    top: 10em;
-    color: $sec-color;
-    fill: $sec-color;
-
-}
-
-.flatpickr-months .flatpickr-prev-month svg,.flatpickr-months .flatpickr-next-month svg {
-    width: 2em;
-    height: 2em;
-}
-
-.flatpickr-months .flatpickr-month {
-    height: 5em;
-}
-
-.flatpickr-current-month {
+  }
+  
+  .flatpickr-months {
+    .flatpickr-prev-month, .flatpickr-next-month {
+      height: 1em;
+      top: 10em;
+      color: #CFAA5B;
+      fill: #CFAA5B;
+    }
+  
+    .flatpickr-prev-month svg, .flatpickr-next-month svg {
+      width: 2em;
+      height: 2em;
+    }
+  
+    .flatpickr-month {
+      height: 5em;
+    }
+  }
+  
+  .flatpickr-current-month {
     top: 25%;
-    width:80%;
-}
-
-.flatpickr-day.selected,.flatpickr-day.startRange,.flatpickr-day.endRange,.flatpickr-day.selected.inRange,.flatpickr-day.startRange.inRange,.flatpickr-day.endRange.inRange,.flatpickr-day.selected:focus,.flatpickr-day.startRange:focus,.flatpickr-day.endRange:focus,.flatpickr-day.selected:hover,.flatpickr-day.startRange:hover,.flatpickr-day.endRange:hover,.flatpickr-day.selected.prevMonthDay,.flatpickr-day.startRange.prevMonthDay,.flatpickr-day.endRange.prevMonthDay,.flatpickr-day.selected.nextMonthDay,.flatpickr-day.startRange.nextMonthDay,.flatpickr-day.endRange.nextMonthDay {
-    background: $sec-color;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: #fff;
-    border-color: $sec-color;
-}
-
-#reservation-second {
-    @include center-col-e;
-
+    width: 80%;
+  }
+  
+  .flatpickr-day {
+    &.selected, &.startRange, &.endRange, &.selected.inRange, &.startRange.inRange, &.endRange.inRange, &.selected:focus, &.startRange:focus, &.endRange:focus, &.selected:hover, &.startRange:hover, &.endRange:hover, &.selected.prevMonthDay, &.startRange.prevMonthDay, &.endRange.prevMonthDay, &.selected.nextMonthDay, &.startRange.nextMonthDay, &.endRange.nextMonthDay {
+      background: #CFAA5B;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #fff;
+      border-color: #CFAA5B;
+    }
+  }
+  
+  #reservation-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  
     .ticket {
-        @include center-row;
-        width: 70%;
-        height: fit-content;
-
-        .ticket-text {
-            @include center-row;
-            height: 100%;
-
-            width: 60%;
-            padding: 2em;
-            background-color: #cfaa5b53;
-            text-align: center;
-        }
-
-        .ticket-price {
-            @include center-col;
-            height: auto;
-            width: 40%;
-            padding: 5em;
-            background-color: $main-color;
-            text-align: center;
-            border: 2px solid $sec-color;
-        }
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      height: fit-content;
+  
+      .ticket-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+        padding: 2em;
+        background-color: rgba(207, 170, 91, 0.3254901961);
+        text-align: center;
+      }
+  
+      .ticket-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 40%;
+        padding: 5em;
+        background-color: #FFFEF0;
+        text-align: center;
+        border: 2px solid #CFAA5B;
+      }
     }
-
-    .ticket-button {
-        a {
-            padding: 1em;
-            border: solid 2px $sec-color;
-
-        }
+  
+    .ticket-button a {
+      padding: 1em;
+      border: solid 2px #CFAA5B;
     }
+  
     .popup-status {
-        display: block;
-        color: black;
-        position: fixed;
-        height: 10em;
-        width: 20em;
-        top: 34em;
-        right: 2em;
-        border-radius: 20px;
-        background-color: $sec-color;
+      display: block;
+      color: black;
+      position: fixed;
+      height: 10em;
+      width: 20em;
+      top: 34em;
+      right: 2em;
+      border-radius: 20px;
+      background-color: #CFAA5B;
     }
-}
+  }
+  

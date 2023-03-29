@@ -61,7 +61,7 @@
                             
                     </div>
                     <div>
-                        <input type="submit" name="contact_mail">Envoyer</input>
+                        <input type="submit" name="contact_mail"></input>
                     </div>
                 </form>
             </div>

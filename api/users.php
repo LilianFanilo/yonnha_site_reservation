@@ -57,12 +57,14 @@ switch ($request_method) {
         }
     break;
     case 'DELETE':
+
             $id = $_GET["id"];
             deleteUser($id);            
+
+
         break;
     
         default :
-            http_response_code(405);
-            echo "Error 405: Method Not Allowed";
+
         break;
 }
