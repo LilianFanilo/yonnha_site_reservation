@@ -13,6 +13,7 @@
         $data = $requete -> fetchAll(PDO::FETCH_OBJ);
         header('Content-Type: application/json');
         echo json_encode($data, JSON_PRETTY_PRINT);
+        header("Access-Control-Allow-Origin: *");
     }
 
     function getUser($id) 
@@ -24,7 +25,8 @@
 
         $data = $requete->fetch(PDO::FETCH_ASSOC);
         header('Content-Type: application/json');
-        echo json_encode($data, JSON_PRETTY_PRINT);
+        echo json_encode($data, JSON_PRETTY_PRINT);        
+        header("Access-Control-Allow-Origin: *");
 
     }
 
@@ -82,10 +84,16 @@ function traiteLogin(){
     } else {return 3;}
 };
 
+function Userlogout(){
+    session_destroy();
+    header('Location: ../index.php?tag=account&action=logout');
+}
+
+
  function deleteUser($id) 
 {
     global $db;
-    $requete = $db->prepare('DELETE FROM personnages WHERE id = :id');
+    $requete = $db->prepare('DELETE FROM user WHERE id = :id');
     $requete->bindValue(':id', $id, PDO::PARAM_INT);
     if ($requete->execute())
     {
@@ -105,6 +113,9 @@ function traiteLogin(){
     }
     header('Content-Type: application/json');
     echo json_encode($response);
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: *");
+    header("Access-Control-Allow-Headers: *");
 }
 
 
@@ -148,11 +159,12 @@ function addBasket($array_POST){
 
     global $db;
     extract($array_POST);
-    $requete = $db->prepare('INSERT INTO basket (id_user, prix_total, nb_billets, date_visit, date_purchase) VALUES (:id_user, :prix_total, :nb_billets, :date_visit, NOW())');
+    $requete = $db->prepare('INSERT INTO basket (id_user, prix_total, nb_billets, date_visit, hour, date_purchase) VALUES (:id_user, :prix_total, :nb_billets, :date_visit, :hour, NOW())');
     $requete->bindValue(':id_user', $id_user, PDO::PARAM_INT);
     $requete->bindValue(':prix_total', $prix_total, PDO::PARAM_STR);
     $requete->bindValue(':nb_billets', $nb_billets, PDO::PARAM_STR);
     $requete->bindValue(':date_visit', $date_visit, PDO::PARAM_STR);
+    $requete->bindValue(':hour', $hour, PDO::PARAM_STR);
     
     if ($requete->execute())
     {

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./view/style/style.css">
+    <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
     <title>Panier</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         include 'navbar.php';
 
 //récupération des données de l'api => ici users
-$url = $api_url."/baskets";
+$url = $api_url."/basket";
 
 $curl = curl_init();
 
@@ -28,6 +29,8 @@ if($response === false){
 }
 
 $data = json_decode($response);
+
+echo $response;
 
 curl_close($curl);
 

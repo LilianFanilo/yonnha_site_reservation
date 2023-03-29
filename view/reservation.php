@@ -11,6 +11,7 @@
     <!-- lien vers le script JavaScript de Flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="./view/style/style.css">
+    <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
     <title>Réservation</title>
 </head>
 
@@ -23,6 +24,8 @@
         <form action="./api/basket.php" method="POST">
             <label for="date">Date :</label>
             <input type="date" id="date" name="date_visit" onchange="calculPrix()" class="flatpickr hide-input"><br><br>
+            <label for="heure">Heure :</label>
+            <input type="time" id="hour" name="hour" min="10:00" max="18:00" required onchange="checkHeure()">
     </section>
     <section id="reservation-second">
         <br><br>
@@ -93,6 +96,16 @@
             var nb_billets = parseInt(document.getElementById("nb_billets").value);
             var prix_total = nb_billets * 15;
             document.getElementById("prix_total").value = prix_total + " €";
+        }
+
+        function checkHeure() {
+        var heure = document.getElementById("hour").value;
+        var min = document.getElementById("hour").min;
+        var max = document.getElementById("hour").max;
+        if (heure < min || heure > max) {
+            alert("Veuillez sélectionner une heure entre 10h et 18h.");
+            document.getElementById("hour").value = "";
+        }
         }
     </script>
 </body>

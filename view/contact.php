@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./view/style/style.css">
     <script defer src="./view/js/app.js"></script>
     <script defer src="./view/js/functions.js"></script>
+    <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
     <title>Contact</title>
 </head>
 
@@ -19,7 +20,7 @@
         <h1>Contactez-nous</h1>
             <div class="inner">
 
-                <form action="/submit-form.php" method="post">
+                <form action="./api/contact.php" method="post">
                     <h2>Formulaire</h3>
                     <div>
                         <span for="">Nom</span>
@@ -60,7 +61,7 @@
                             
                     </div>
                     <div>
-                        <button type="submit">Envoyer</button>
+                        <input type="submit" name="contact_mail">Envoyer</input>
                     </div>
                 </form>
             </div>

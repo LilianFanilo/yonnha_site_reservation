@@ -1,4 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: *");
+header("Access-Control-Allow-Headers: *");
 session_start();
 
 require ('../model/model.php');
@@ -30,6 +33,13 @@ switch ($request_method) {
                 header ('Location:admin.php?err=login');
             }
         }
+
+        if (isset($_GET["action"])) {
+            $action = $_GET["action"];
+            if ($action === "logout") {
+                Userlogout();
+            }
+        }
     break;
     
     case 'POST':
@@ -46,13 +56,11 @@ switch ($request_method) {
             print_r($array_POST);
         }
     break;
-
-        if (isset($_POST["delete_user"])) {
+    case 'DELETE':
 
             $id = $_GET["id"];
             deleteUser($id);            
 
-        }
 
         break;
     

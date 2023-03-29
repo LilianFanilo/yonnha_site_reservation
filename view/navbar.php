@@ -22,7 +22,7 @@
                         <li class="nav-item"><a href="./index.php?tag=gestion_panel" class="nav-link">Panneau de gestion</a></li>
                     <?php endif; ?>
                     <li class="nav-item"><a href="./index.php?tag=basket" class="nav-link">Panier</a></li>
-                    <li class="nav-item"><a href="./index.php?tag=account&action=logout" class="nav-link">Déconnexion</a></li>
+                    <li class="nav-item"><a href="./api/users.php?action=logout" class="nav-link">Déconnexion</a></li>
                 <?php endif; ?>
             </ul>
         </div>
