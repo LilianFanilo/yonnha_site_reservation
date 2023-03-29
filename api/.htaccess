@@ -11,3 +11,4 @@ RewriteRule ^artists/(\d+)$ artists.php?id=$1 [NC,L]
 
 # correspond à "/basket" pour renvoyer "basket.php"
 RewriteRule ^baskets/?$ basket.php [NC,L]
+RewriteRule ^baskets/(\d+)$ basket.php?id=$1 [NC,L]

@@ -1,4 +1,7 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: *");
+header("Access-Control-Allow-Headers: *");
 session_start();
 require ('../model/model.php');
 
@@ -7,7 +10,13 @@ $array_POST = array();
 $request_method = $_SERVER["REQUEST_METHOD"];
 switch ($request_method) {
     case 'GET': 
+    if (empty(isset($_GET["id"]))) {
         getBaskets();
+    } else {
+        $id = $_GET["id"];
+        getBasket($id);
+    }
+
     break;
     
     case 'POST':
@@ -24,17 +33,11 @@ switch ($request_method) {
             addBasket($array_POST);
             print_r($array_POST);
         }
-
-        if (isset($_POST["delete_basket"])) {
-
-            $id = $_GET["id"];
-            deleteBasket($id);            
-
-        }
         
         break;
     
         default :
-
+        http_response_code(405);
+        echo "Error 405: Method Not Allowed";
         break;
 }
