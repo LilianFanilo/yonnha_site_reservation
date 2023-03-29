@@ -12,7 +12,9 @@ const Chart = () => {
 
   return (
     <div>
+      <p className='number_stat'>
       Nombre de réservations : {stats.length}
+      </p>
     </div>
   );
 };

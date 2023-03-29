@@ -3,3 +3,8 @@
     padding: 1.5em;
     border-radius: 0.5em;
 }
+
+.number_stat {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+}

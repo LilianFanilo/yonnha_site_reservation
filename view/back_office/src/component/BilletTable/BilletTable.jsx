@@ -20,7 +20,9 @@ export const BilletTable = () => {
     <div className='BilletTable-container'>
         <Chart/>
       <div>
+      <p className='number_stat'>
         Recettes : {total} €
+      </p>
       </div>
       <table>
         <thead>
