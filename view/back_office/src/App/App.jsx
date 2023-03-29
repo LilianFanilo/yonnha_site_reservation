@@ -5,7 +5,7 @@ import Chart from '../component/Chart/Chart';
 export const App = () => {
   return (
     <div className="App">
-        <a href="./">Retour sur le site</a>
+        <a href="http://localhost/yonnha_site_reservation">Retour sur le site</a>
         <Chart/>
         <UserTable/>
     </div>
