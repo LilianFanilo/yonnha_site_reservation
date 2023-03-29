@@ -31,7 +31,6 @@ export const UserTable = () => {
     <table>
       <thead>
         <tr>
-          <th>ID</th>
           <th>Login</th>
           <th>Prénom</th>
           <th>Nom</th>
@@ -43,7 +42,6 @@ export const UserTable = () => {
       <tbody>
         {users.map(user => (
           <tr key={user.id}>
-            <td>{user.id}</td>
             <td>{user.login}</td>
             <td>{user.name}</td>
             <td>{user.surname}</td>
