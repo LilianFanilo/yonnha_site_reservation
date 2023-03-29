@@ -96,22 +96,22 @@
                 <form action="./api/users.php" method="POST">
                     
                     <label for="login">Saisissez votre login :</label>
-                    <input type=text name="login"> 
+                    <input type=text name="login" required> 
             
                     <label for="mail">Saisissez votre mail :</label>
-                    <input type="email" name="mail"> 
+                    <input type="email" name="mail" required> 
                     
                     <label for="name">Saisissez votre nom :</label>
-                    <input type=text name="surname"> 
+                    <input type=text name="surname" required> 
                     
                     <label for="surname">Saisissez votre prenom :</label>
-                    <input type=text name="name"> 
+                    <input type=text name="name" required> 
 
                     <label for="birthday">Saisissez votre date de naissance :</label>
-                    <input type=date name="birthday"> 
+                    <input type=date name="birthday" required> 
                 
                     <p>et votre mot de passe :</p>
-                    <input type="password" name="pwd">
+                    <input type="password" name="pwd" required>
                     <input type=submit value= "OK">
 
                     <input type="hidden" name="add_user">                 

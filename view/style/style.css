@@ -293,7 +293,7 @@ a {
 }
 #home-second .stroke {
   position: relative;
-  border-bottom: 2.5px solid #CFAA5B;
+  border-bottom: 2.5px solid black;
   top: 0em;
   margin: 6em;
 }
@@ -1887,6 +1887,13 @@ a {
 }
 
 #log-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#account-first {
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -162,7 +162,7 @@
         <div class="popup-container4">
             <div class="popup">
                 <div class="paint">
-                    <img src="./view/images/etrange-residence-de-taiwan.jpg" alt="l’étrange résidence de Taïwan - Chang Dai-chien">
+                <img src="./view/images/couleur-de-l-erable.jpg" alt="Couleur de l’érable - Erin Hanson">
                     <p class="context">
                         Titre du tableau :Couleur de l’érable <br>
                         Dimensions :91.44x127 cm<br>
