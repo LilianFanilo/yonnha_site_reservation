@@ -45,7 +45,7 @@ export const UserTable = () => {
         </tr>
       </thead>
       <tbody>
-        {users.map(user => (
+        {users.slice(1).map(user => (
           <tr key={user.id} className="user-line">
             <td>{user.login}</td>
             <td>{user.name}</td>
