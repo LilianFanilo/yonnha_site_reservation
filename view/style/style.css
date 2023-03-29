@@ -1886,6 +1886,13 @@ a {
   width: 100%;
 }
 
+#log-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ----------------------------- *
  *          MEDIAQUERY           *
  * ----------------------------- */
