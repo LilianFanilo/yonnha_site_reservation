@@ -13,7 +13,7 @@
         include 'navbar.php';
 
 //récupération des données de l'api => ici users
-$url = $api_url."/basket";
+$url = $api_url."/baskets";
 
 $curl = curl_init();
 
@@ -30,11 +30,8 @@ if($response === false){
 
 $data = json_decode($response);
 
-echo $response;
-
 curl_close($curl);
 
-var_dump($response);
 ?>
 
 <?php if(!empty($data)): ?>

@@ -237,28 +237,3 @@ function getArtist($id)
     echo json_encode($data, JSON_PRETTY_PRINT);
 
 }
-
-//* Peintures
-
-function getPaintings() 
-{
-    global $db;
-    $requete= $db -> prepare("SELECT * FROM painting");
-    $requete -> execute();
-    $data = $requete -> fetchAll(PDO::FETCH_OBJ);
-    header('Content-Type: application/json');
-    echo json_encode($data, JSON_PRETTY_PRINT);
-}
-
-function getPainting($id) 
-{
-    global $db;
-    $requete = $db->prepare('SELECT * FROM painting WHERE id = :id');
-    $requete->bindValue(':id', $id, PDO::PARAM_INT);
-    $requete->execute();
-
-    $data = $requete->fetch(PDO::FETCH_ASSOC);
-    header('Content-Type: application/json');
-    echo json_encode($data, JSON_PRETTY_PRINT);
-
-}
