@@ -1,3 +1,4 @@
+import "./BilletTable.css";
 import React, { useState, useEffect } from 'react';
 import Chart from '../Chart/Chart';
 
@@ -16,7 +17,7 @@ export const BilletTable = () => {
 
   return (
     
-    <div>
+    <div className='BilletTable-container'>
         <Chart/>
       <div>
         Recettes : {total} €

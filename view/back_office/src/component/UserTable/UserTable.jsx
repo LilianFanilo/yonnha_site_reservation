@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "./UserTable.css";
 
 export const UserTable = () => {
   const [users, setUsers] = useState([]);
@@ -45,7 +46,7 @@ export const UserTable = () => {
       </thead>
       <tbody>
         {users.map(user => (
-          <tr key={user.id}>
+          <tr key={user.id} className="user-line">
             <td>{user.login}</td>
             <td>{user.name}</td>
             <td>{user.surname}</td>
