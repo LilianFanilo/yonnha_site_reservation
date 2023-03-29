@@ -64,6 +64,7 @@
             ?>
         
             <p><?= $artist -> name ?></p>
+            <img src="<?= $artist -> img ?>" alt="<?= $artist -> name ?>">
         
         <?php
             endforeach;
