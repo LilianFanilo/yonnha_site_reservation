@@ -1,13 +1,15 @@
 import './App.css';
 import { UserTable } from '../component/UserTable/UserTable';
-import Chart from '../component/Chart/Chart';
+import { BilletTable } from '../component/BilletTable/BilletTable';
 
 export const App = () => {
   return (
     <div className="App">
-        <a href="./">Retour sur le site</a>
-        <Chart/>
+        <a href="http://localhost/yonnha_site_reservation">Retour sur le site</a>
+        <div className='table_container'>
         <UserTable/>
+        <BilletTable/>
+        </div>
     </div>
   );
 }

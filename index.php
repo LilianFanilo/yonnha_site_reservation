@@ -43,7 +43,7 @@ if (isset($_GET['tag']))
 
     if ($tag === "gestion_panel") 
     {
-        include './view/gestion_panel.php';
+        header("Location: ./view/back_office/build");
     }
 
 } else {

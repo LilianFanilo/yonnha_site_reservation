@@ -11,27 +11,30 @@ export const UserTable = () => {
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost/yonnha_site_reservation/api/users/${id}`, {
-      method: 'DELETE',
-      headers: {"Access-Control-Allow-Origin" : "*",
-      "Access-Control-Allow-Methods": "*",
-      "Access-Control-Allow-Headers": "*"}
-    })
-      .then(response => {
-        if (response.ok) {
-          setUsers(users.filter(user => user.id !== id));
-        } else {
-          console.error(`Une erreur est survenue : ${response.status}`);
-        }
+    const confirmed = window.confirm("Êtes-vous sûr de vouloir supprimer cet utilisateur ?");
+  
+    if (confirmed) {
+      fetch(`http://localhost/yonnha_site_reservation/api/users/${id}`, {
+        method: 'DELETE',
+        headers: {"Access-Control-Allow-Origin" : "*",
+          "Access-Control-Allow-Methods": "*",
+          "Access-Control-Allow-Headers": "*"}
       })
-      .catch(error => console.error(error));
+        .then(response => {
+          if (response.ok) {
+            setUsers(users.filter(user => user.id !== id));
+          } else {
+            console.error(`Une erreur est survenue : ${response.status}`);
+          }
+        })
+        .catch(error => console.error(error));
+    }
   }
-
+  
   return (
     <table>
       <thead>
         <tr>
-          <th>ID</th>
           <th>Login</th>
           <th>Prénom</th>
           <th>Nom</th>
@@ -43,7 +46,6 @@ export const UserTable = () => {
       <tbody>
         {users.map(user => (
           <tr key={user.id}>
-            <td>{user.id}</td>
             <td>{user.login}</td>
             <td>{user.name}</td>
             <td>{user.surname}</td>
@@ -57,4 +59,4 @@ export const UserTable = () => {
       </tbody>
     </table>
   );
-}
+}  
