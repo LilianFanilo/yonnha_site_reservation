@@ -347,6 +347,9 @@ a {
   padding: 1em;
 }
 
+/* ----------------------------- *
+ *            GALLERY            *
+ * ----------------------------- */
 #gallery-first {
   display: flex;
   flex-direction: column;
@@ -1833,6 +1836,54 @@ a {
   height: 43px;
   font-size: 1em;
   background: 0 0;
+}
+
+/* ----------------------------- *
+ *     DISPOSITIF INTERACTIF     *
+ * ----------------------------- */
+#dispo-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+}
+
+#dispo-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "JOSEFINS";
+  font-size: 1.5em;
+}
+#dispo-second .content {
+  width: 80%;
+}
+#dispo-second .content .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#dispo-second .content .top img {
+  width: 30%;
+}
+#dispo-second .content .top .top-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 1em 0 1em;
+  width: 100%;
+}
+#dispo-second .content .top .top-col img {
+  padding-top: 1em;
+  padding-left: 3em;
+  width: 70%;
+}
+#dispo-second .content .bottom {
+  padding: 1em 0 1em 0;
+  width: 100%;
 }
 
 /* ----------------------------- *

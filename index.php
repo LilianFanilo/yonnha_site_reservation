@@ -21,6 +21,11 @@ if (isset($_GET['tag']))
         include './view/contact.php';
     }
 
+    if ($tag === "dispositif") 
+    {
+        include './view/dispositif.php';
+    }
+
     if ($tag === "account") 
     {
         include './view/account.php';
