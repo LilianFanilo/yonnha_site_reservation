@@ -19,6 +19,7 @@
 
     <section id="dispo-first">
         <h1>Dispositif Intéractif</h1>
+        <h2>Immers'Paint</h2>
     </section>
     <section id="dispo-second">
         <div class="content">
