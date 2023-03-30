@@ -28,9 +28,6 @@ curl_close($curl);
     <title>Yonnha</title>
     <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
     <link rel="stylesheet" href=" ./view/style/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-
     <script defer src="./view/js/app.js"></script>
     <script defer src="./view/js/functions.js"></script>
 </head>
