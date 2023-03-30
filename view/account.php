@@ -12,8 +12,11 @@ if (isset($_GET["action"])) :
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="./view/style/style.css">
+            <title>Yonnha</title>
             <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
+            <link rel="stylesheet" href=" ./view/style/style.css">
+            <script defer src="./view/js/app.js"></script>
+            <script defer src="./view/js/functions.js"></script>
             <title>Connexion</title>
         </head>
 
@@ -93,8 +96,11 @@ if (isset($_GET["action"])) :
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="./view/style/style.css">
+            <title>Yonnha</title>
             <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
+            <link rel="stylesheet" href=" ./view/style/style.css">
+            <script defer src="./view/js/app.js"></script>
+            <script defer src="./view/js/functions.js"></script>
             <title>Inscription</title>
         </head>
 
@@ -103,27 +109,33 @@ if (isset($_GET["action"])) :
             include 'navbar.php';
             ?>
             <section id="account-first">
-                <div class="inner">
+                <div class="account inner">
+                    <h2>INSCRIPTION</h2>
                     <form action="./api/users.php" method="POST">
 
-                        <label for="login">Saisissez votre login :</label>
-                        <input type=text name="login" required>
-
-                        <label for="mail">Saisissez votre mail :</label>
-                        <input type="email" name="mail" required>
-
-                        <label for="name">Saisissez votre nom :</label>
-                        <input type=text name="surname" required>
-
-                        <label for="surname">Saisissez votre prenom :</label>
-                        <input type=text name="name" required>
-
-                        <label for="birthday">Saisissez votre date de naissance :</label>
-                        <input type=date name="birthday" required>
-
+                        <span for="">Saisissez votre login :</span>
+                        <label class="form-group" for="login">
+                            <input type=text name="login" class="form-control" required>
+                        </label>
+                        <span for="">Saisissez votre mail :</span>
+                        <label class="form-group" for="mail">
+                            <input type="email" name="mail" class="form-control" required>
+                        </label>
+                        <span for="">Saisissez votre nom :</span>
+                        <label class="form-group" for="name">
+                            <input type=text name="surname" class="form-control" required>
+                        </label>
+                        <span for="">Saisissez votre prenom :</span>
+                        <label class="form-group" for="surname">
+                            <input type=text name="name" class="form-control" required>
+                        </label>
+                        <span for="">Saisissez votre date de naissance :</span>
+                        <label class="form-group" for="birthday">
+                            <input type=date name="birthday" class="form-control" required>
+                        </label>
                         <p>et votre mot de passe :</p>
-                        <input type="password" name="pwd" required>
-                        <input type=submit value="OK">
+                        <input type="password" name="pwd" class="form-control" required>
+                        <input type=submit value="VALIDATION">
 
                         <input type="hidden" name="add_user">
                     </form>
@@ -145,8 +157,11 @@ if (isset($_GET["action"])) :
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="./view/style/style.css">
+            <title>Yonnha</title>
             <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
+            <link rel="stylesheet" href=" ./view/style/style.css">
+            <script defer src="./view/js/app.js"></script>
+            <script defer src="./view/js/functions.js"></script>
             <title>Déconnexion</title>
         </head>
 

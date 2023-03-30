@@ -1966,6 +1966,36 @@ a {
   padding-bottom: 0.5em;
 }
 
+@media (max-width: 1000px) {
+  #account-first h2 {
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+  }
+  #account-first .inner {
+    height: 31em;
+    width: 30em;
+  }
+  #account-first span {
+    font-size: 0.9em;
+    color: black;
+    padding: 1em;
+  }
+}
+@media (max-width: 690px) {
+  #account-first h2 {
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+  }
+  #account-first .inner {
+    height: 31em;
+    width: 20em;
+  }
+  #account-first span {
+    font-size: 0.9em;
+    color: black;
+    padding: 1em;
+  }
+}
 /* ----------------------------- *
  *          MEDIAQUERY           *
  * ----------------------------- */
