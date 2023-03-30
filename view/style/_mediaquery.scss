@@ -300,3 +300,71 @@
   }
 
 }
+
+@media (max-width: 1300px) {
+  #artistes-1,
+#artistes-2,
+#artistes-3,
+#artistes-4,
+#artistes-5,
+#artistes-6 {
+  padding-top: 4em;
+  margin-bottom: 2em;
+  .content {
+
+      .img {
+          padding: 1em;
+
+          img {
+              height: auto;
+              width: 15em;
+              padding-bottom: 1em;
+          }
+      }
+
+      .text {
+
+          padding: 1em;
+          margin: 1em;
+
+      }
+  }
+  }
+}
+@media (max-width: 1300px) {
+  #artistes-1,
+#artistes-2,
+#artistes-3,
+#artistes-4,
+#artistes-5,
+#artistes-6 {
+  padding-top: 4em;
+  margin-bottom: 2em;
+  .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .img {
+          position: relative;
+          padding: 1em;
+
+          img {
+              height: auto;
+              width: 15em;
+              padding-bottom: 1em;
+          }
+      }
+
+      .text {
+
+          bottom: 0em;
+
+          h1 {
+              font-family: 'TAN-PEARL';
+              font-size: 2em;
+          }
+      }
+  }
+  }
+}

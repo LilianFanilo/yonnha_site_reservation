@@ -1,0 +1,50 @@
+
+
+
+
+#artistes-1,
+#artistes-2,
+#artistes-3,
+#artistes-4,
+#artistes-5,
+#artistes-6 {
+    height: fit-content;
+    @include center-col;
+padding-top: 3em;
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .img {
+            padding: 2em;
+            @include center-col;
+            font-family: 'JOSEFINS';
+            font-size: 1.2em;
+            img {
+                min-height: auto;
+                width: 15em;
+                top: 13em;
+                padding-bottom: 1em;
+            }
+        }
+
+        .text {
+            font-family: 'JOSEFINS';
+            height: fit-content;
+            width: auto;
+
+            background-color: #d9d9d9a0;
+            padding: 2em;
+            margin: 3em;
+            bottom: 7em;
+            font-size: 1.2em;
+
+            h1 {
+                font-family: 'TAN-PEARL';
+                font-size: 2em;
+            }
+        }
+    }
+
+}

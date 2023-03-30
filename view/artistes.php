@@ -31,34 +31,46 @@ curl_close($curl);
     <script defer src="./view/js/app.js"></script>
     <script defer src="./view/js/functions.js"></script>
 </head>
+<header>
+        <?php
+        include 'navbar.php';
+        ?>
+    </header>
 
 <body>
 
-    <section id="artiste-first">
-        <?php
-        // Utilisation des données récupérées
-        foreach ($data as $artist) :
-        ?>
-            <img src="<?= $artist->img ?>" alt="<?= $artist->name ?>">
+    <?php
+    // Utilisation des données récupérées
+    foreach ($data as $artist) :
+    ?>
+        <section id="artistes-<?= $artist->id ?>">
+            <div class="artistes content">
+                <div class="artistes img">
+                    <img src="<?= $artist->img ?>" alt="<?= $artist->name ?>">
+                    <p><?= $artist->citation ?></p>
+
+                </div>
+
+                <div class="artistes text">
+
+
+                    <h1><?= $artist->name ?></h1>
+                    <div class="artiste stroke"></div>
+                    <p><?= $artist->date ?></p <p><?= $artist->description ?></p><br>
+                    <p><?= $artist->peinture ?></p><br>
+
+                    <p><?= $artist->anecdote ?></p><br>
+                </div>
+            </div>
+        </section>
 
 
 
-            <p><?= $artist->name ?></p>
-            <p><?= $artist->date ?></p>
-            <p><?= $artist->description ?></p>
-            <p><?= $artist->peinture ?></p>
-
-            <p><?= $artist->anecdote ?></p>
-            <p><?= $artist->citation ?></p>
-
-
-
-        <?php
-        endforeach;
-        ?>
+    <?php
+    endforeach;
+    ?>
 
     </section>
-
     <?php
     include 'footer.php'
     ?>
