@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yonnha présente sa toute nouvelle exposition: La révolution en couleur"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script defer src="./view/js/app.js"></script>
     <script defer src="./view/js/functions.js"></script>
@@ -16,9 +17,11 @@
 </head>
 
 <body>
+    <header>
     <?php
     include 'navbar.php';
     ?>
+    </header>
     <section id="reservation-first">
         <h1>Réservation</h1>
         <form action="./api/basket.php" method="POST">
@@ -52,7 +55,7 @@
 
         <div class="ticket-button">
             <?php if (isset($_SESSION['login'])) : ?>
-                <input type="submit" value="Réserver">
+                <input class="reserver" type="submit" value="Réserver">
                 <input type="hidden" name="id_user" value="<?= $_SESSION["id"] ?>">
                 <input type="hidden" name="add_basket">
             <?php else : ?>

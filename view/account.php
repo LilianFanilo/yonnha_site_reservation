@@ -12,7 +12,7 @@ if (isset($_GET["action"])) :
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Yonnha</title>
+            <meta name="description" content="Yonnha présente sa toute nouvelle exposition: La révolution en couleur"/>
             <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
             <link rel="stylesheet" href=" ./view/style/style.css">
             <script defer src="./view/js/app.js"></script>
@@ -21,10 +21,12 @@ if (isset($_GET["action"])) :
         </head>
 
         <body>
-
+<header>
             <?php
             include 'navbar.php';
-            ?>
+            ?>    
+</header>
+
 
             <section id="log-page">
                 <div class="log inner">
@@ -90,6 +92,10 @@ if (isset($_GET["action"])) :
 </section>
         </body>
 
+        <?php
+    include 'footer.php'
+    ?>
+
         </html>
     <?php endif;
 
@@ -151,6 +157,10 @@ if (isset($_GET["action"])) :
             </section>
         </body>
 
+        <?php
+    include 'footer.php'
+    ?>
+
         </html>
     <?php
     endif;
@@ -181,6 +191,11 @@ if (isset($_GET["action"])) :
             <p> Vous avez bien été déconnecté</p>
             </section>
         </body>
+        
+
+        <?php
+    include 'footer.php'
+    ?>
 
         </html>
 

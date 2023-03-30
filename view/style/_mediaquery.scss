@@ -74,7 +74,165 @@
       justify-content: space-between;
       height: 90%;
     }
+
+
+    .popup-container2 .popup {
+      .paint {
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: max-content;
+          padding: 0.5em 7em 0.5em 7em;
+        }
+
+        .context {
+          display: none;
+        }
+      }
+
+      margin: 0.5em;
+      padding: 1em;
+      justify-content: space-between;
+      height: 90%;
+    }
+
+    .popup-container3 .popup {
+      .paint {
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: max-content;
+          padding: 0.5em 7em 0.5em 7em;
+        }
+
+        .context {
+          display: none;
+        }
+      }
+
+      margin: 0.5em;
+      padding: 1em;
+      justify-content: space-between;
+      height: 90%;
+    }
+
+    .popup-container4 .popup {
+      .paint {
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: max-content;
+          padding: 0.5em 7em 0.5em 7em;
+        }
+
+        .context {
+          display: none;
+        }
+      }
+
+      margin: 0.5em;
+      padding: 1em;
+      justify-content: space-between;
+      height: 90%;
+    }
+
+    .popup-container5 .popup {
+      .paint {
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: max-content;
+          padding: 0.5em 7em 0.5em 7em;
+        }
+
+        .context {
+          display: none;
+        }
+      }
+
+      margin: 0.5em;
+      padding: 1em;
+      justify-content: space-between;
+      height: 90%;
+    }
+
+    .popup-container6 .popup {
+      .paint {
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: max-content;
+          padding: 0.5em 7em 0.5em 7em;
+        }
+
+        .context {
+          display: none;
+        }
+      }
+
+      margin: 0.5em;
+      padding: 1em;
+      justify-content: space-between;
+      height: 90%;
+    }
+
+    .popup-container7 .popup {
+      .paint {
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: max-content;
+          padding: 0.5em 7em 0.5em 7em;
+        }
+
+        .context {
+          display: none;
+        }
+      }
+
+      margin: 0.5em;
+      padding: 1em;
+      justify-content: space-between;
+      height: 90%;
+    }
+
+    .popup-container1 .popup {
+      .paint {
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: max-content;
+          padding: 0.5em 7em 0.5em 7em;
+        }
+
+        .context {
+          display: none;
+        }
+      }
+
+      margin: 0.5em;
+      padding: 1em;
+      justify-content: space-between;
+      height: 90%;
+    }
   }
+
+  
+
 }
 
 @media (max-width: 400px) {
@@ -114,28 +272,52 @@
       left: 3.5em;
     }
 
-    .six {
-      height: 12em;
-      width: auto;
-      bottom: 9em;
-      right: 2.5em;
-    }
 
     .six {
       height: 12em;
       width: auto;
       bottom: 11em;
-      left: 4em;
+      right: 4em;
     }
 
     .seven {
       height: 12em;
       width: auto;
       bottom: 12em;
-      right: 4em;
+      left: 3em;
     }
 
     .popup-container1 .popup .paint img {
+      width: 100%;
+      height: max-content;
+      padding: 0.5em 3em 0.5em 3em;
+    }
+    .popup-container2 .popup .paint img {
+      width: 100%;
+      height: max-content;
+      padding: 0.5em 3em 0.5em 3em;
+    }
+    .popup-container3 .popup .paint img {
+      width: 100%;
+      height: max-content;
+      padding: 0.5em 3em 0.5em 3em;
+    }
+    .popup-container4 .popup .paint img {
+      width: 100%;
+      height: max-content;
+      padding: 0.5em 3em 0.5em 3em;
+    }
+    .popup-container5 .popup .paint img {
+      width: 100%;
+      height: max-content;
+      padding: 0.5em 3em 0.5em 3em;
+    }
+    .popup-container6 .popup .paint img {
+      width: 100%;
+      height: max-content;
+      padding: 0.5em 3em 0.5em 3em;
+    }
+    .popup-container7 .popup .paint img {
       width: 100%;
       height: max-content;
       padding: 0.5em 3em 0.5em 3em;
@@ -144,6 +326,7 @@
 }
 
 @media (max-width: 1020px) {
+
   #contact-first {
     display: flex;
     flex-direction: column;
@@ -153,7 +336,16 @@
     h1 {
       font-size: 3em;
     }
+    #artistes-1 .content, #artistes-2 .content, #artistes-3 .content, #artistes-4 .content, #artistes-5 .content, #artistes-6 .content {
+      flex-direction: row;
   }
+  }
+  #home-third h1 {
+    font-size: 2em;
+    width: 35em;
+    padding: 3em;
+}
+
 }
 
 @media (max-width: 400px) {
@@ -169,6 +361,11 @@
     h2 {
       font-size: 1.5em;
     }
+    .form-control {
+
+      width: 80%;
+
+  }
   }
 }
 
@@ -190,6 +387,7 @@
       padding: 1em;
     }
   }
+  
 }
 
 @media(max-width:690px) {
@@ -276,11 +474,12 @@
 
   #reservation-second .ticket {
     flex-direction: column;
-    p{
+
+    p {
       font-size: 0.8em;
 
     }
- 
+
     .ticket-text {
       height: 100%;
       width: inherit;
@@ -288,83 +487,127 @@
 
     .ticket-price {
       height: auto;
-      width: inherit
-      ;
+      width: inherit;
     }
   }
 
-  .flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+  .flatpickr-months .flatpickr-prev-month,
+  .flatpickr-months .flatpickr-next-month {
     height: 1em;
     top: 10em;
     left: 21em;
   }
 
+  #form {
+    width: 20em;
+  }
+
+}
+@media(max-width:400px) {
+
+  #reservation-second .ticket {
+    flex-direction: column;
+
+    p {
+      font-size: 0.8em;
+
+    }
+
+    .ticket-text {
+      height: 100%;
+      width: inherit;
+    }
+
+    .ticket-price {
+      height: auto;
+      width: inherit;
+    }
+  }
+
+  .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month, .flatpickr-months .flatpickr-next-month.flatpickr-prev-month {
+    left: -2.5em;
+}
+
+
+  form {
+    width: 20em;
+  }
+  .flatpickr-calendar.inline {
+
+    width: 20em;
+}
+
 }
 
 @media (max-width: 1300px) {
+
   #artistes-1,
-#artistes-2,
-#artistes-3,
-#artistes-4,
-#artistes-5,
-#artistes-6 {
-  padding-top: 4em;
-  margin-bottom: 2em;
-  .content {
+  #artistes-2,
+  #artistes-3,
+  #artistes-4,
+  #artistes-5,
+  #artistes-6 {
+    padding-top: 4em;
+    margin-bottom: 2em;
+
+    .content {
 
       .img {
-          padding: 1em;
+        padding: 1em;
 
-          img {
-              height: auto;
-              width: 15em;
-              padding-bottom: 1em;
-          }
+        img {
+          height: auto;
+          width: 15em;
+          padding-bottom: 1em;
+        }
       }
 
       .text {
 
-          padding: 1em;
-          margin: 1em;
+        padding: 1em;
+        margin: 1em;
 
       }
-  }
+    }
   }
 }
+
 @media (max-width: 1300px) {
+
   #artistes-1,
-#artistes-2,
-#artistes-3,
-#artistes-4,
-#artistes-5,
-#artistes-6 {
-  padding-top: 4em;
-  margin-bottom: 2em;
-  .content {
+  #artistes-2,
+  #artistes-3,
+  #artistes-4,
+  #artistes-5,
+  #artistes-6 {
+    padding-top: 4em;
+    margin-bottom: 2em;
+
+    .content {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
 
       .img {
-          position: relative;
-          padding: 1em;
+        position: relative;
+        padding: 1em;
 
-          img {
-              height: auto;
-              width: 15em;
-              padding-bottom: 1em;
-          }
+        img {
+          height: auto;
+          width: 15em;
+          padding-bottom: 1em;
+        }
       }
 
       .text {
 
-          bottom: 0em;
+        bottom: 0em;
 
-          h1 {
-              font-family: 'TAN-PEARL';
-              font-size: 2em;
-          }
+        h1 {
+          font-family: 'TAN-PEARL';
+          font-size: 2em;
+        }
       }
-  }
+    }
   }
 }

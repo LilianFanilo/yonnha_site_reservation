@@ -25,7 +25,8 @@ curl_close($curl);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yonnha</title>
+    <meta name="description" content="Yonnha présente sa toute nouvelle exposition: La révolution en couleur"/>
+    <title>Accueil</title>
     <link rel="icon" href="./view/images/logo_yonnha.png" type="image/icon type">
     <link rel="stylesheet" href=" ./view/style/style.css">
     <script defer src="./view/js/app.js"></script>
@@ -51,43 +52,43 @@ curl_close($curl);
                 <li>
 
                     <a href="index.php?tag=gallery">
-            <img src="./view/images/la-passerelle-japonaise.jpg" alt="peinture la passerelle japonaise - Van Gogh">
-                    </a>
-                </li>
-                <li>
-
-                <a href="index.php?tag=gallery">
-            <img src="./view/images/etrange-residence-de-taiwan.jpg" alt="l’étrange résidence de Taïwan - Chang Dai-chien">
+                        <img src="./view/images/la-passerelle-japonaise.jpg" alt="peinture la passerelle japonaise - Van Gogh">
                     </a>
                 </li>
                 <li>
 
                     <a href="index.php?tag=gallery">
-            <img src="./view/images/oliviers-avec-ciel-jaune-et-soleil.webp" alt="Oliviers avec ciel jaune et soleil - Van Gogh">
+                        <img src="./view/images/etrange-residence-de-taiwan.jpg" alt="l’étrange résidence de Taïwan - Chang Dai-chien">
                     </a>
                 </li>
                 <li>
 
                     <a href="index.php?tag=gallery">
-            <img src="./view/images/couleur-de-l-erable.jpg" alt="Couleur de l’érable - Erin Hanson">
+                        <img src="./view/images/oliviers-avec-ciel-jaune-et-soleil.webp" alt="Oliviers avec ciel jaune et soleil - Van Gogh">
                     </a>
                 </li>
                 <li>
 
                     <a href="index.php?tag=gallery">
-            <img src="./view/images/nuit-etoilee.jpg" alt="La Nuit étoilée - Van Gogh">
+                        <img src="./view/images/couleur-de-l-erable.jpg" alt="Couleur de l’érable - Erin Hanson">
                     </a>
                 </li>
                 <li>
 
                     <a href="index.php?tag=gallery">
-            <img src="./view/images/la-chabanne.jpg" alt="La chabanne - Marie Bracquemond ">
+                        <img src="./view/images/nuit-etoilee.jpg" alt="La Nuit étoilée - Van Gogh">
                     </a>
                 </li>
                 <li>
 
                     <a href="index.php?tag=gallery">
-            <img src="./view/images/chaumiere-en-normandie.jpg" alt="Chaumière en Normandie - Berthe Morisot">
+                        <img src="./view/images/la-chabanne.jpg" alt="La chabanne - Marie Bracquemond ">
+                    </a>
+                </li>
+                <li>
+
+                    <a href="index.php?tag=gallery">
+                        <img src="./view/images/chaumiere-en-normandie.jpg" alt="Chaumière en Normandie - Berthe Morisot">
                     </a>
                 </li>
             </ul>
@@ -100,19 +101,41 @@ curl_close($curl);
         <a href="index.php?tag=dispositif">Voir le dispositif intéractif</a>
     </section>
     <section id="home-fourth">
-        <!-- slider2 -->
-        <!-- slider3 artiste -->
+        <h1>Quelques artistes</h1>
+        <!--- Start Slider --->
+        <Section id="slider">
+            <div class="slider-container">
+                <!-- Start Slides -->
+                <div id="slides">
+                    <?php
+                    // Utilisation des données récupérées
+                    foreach ($data as $artist) :
+                    ?>
+                        <div class="slide"><a href="index.php?tag=artistes">
+                            <img src="<?= $artist->img ?>" alt="<?= $artist->name ?>">
+                            <div class="caption">
+                                <p>
+                                    <?= $artist->citation ?>
+                                </p>
+                            </div></a>
+                        </div>
+                        
+                    <?php
+                    endforeach;
+                    ?>
 
-        <?php
-        // Utilisation des données récupérées
-        foreach ($data as $artist) :
-        ?>
+                </div>
+                <!-- End Slides -->
 
-            <p><?= $artist->name ?></p>
+                <!-- Start Timeline -->
+                <span class="timeline"></span>
+                <!-- End Timeline -->
+            </div>
+            <a href="index.php?tag=dispositif" alt="Voir la page artiste">Voir plus d'artistes!</a>
 
-        <?php
-        endforeach;
-        ?>
+        </Section>
+        <!--- End Slider --->
+
     </section>
     <?php
     include 'footer.php'
@@ -123,4 +146,4 @@ curl_close($curl);
 </body>
 
 
-</html> 
+</html>

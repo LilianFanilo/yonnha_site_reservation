@@ -1,0 +1,17 @@
+#basket {
+    h1 {
+        font-size: 3em;
+        padding-bottom: 2em; 
+    }
+    @include center-col;
+    .table-content{
+        padding: 2em;
+        background-color: #FDD1B8;
+        color: black;
+    }
+    th, td {
+        padding: 0.5em;
+        border-left: 2px solid #CFAA5B;
+        border-right: 2px solid #CFAA5B;
+    }
+}

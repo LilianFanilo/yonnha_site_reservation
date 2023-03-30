@@ -347,6 +347,220 @@ a {
   padding: 1em;
 }
 
+#home-fourth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*--- Start Slider animation ---*/
+}
+#home-fourth * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#home-fourth img {
+  display: block;
+  width: auto;
+  height: 100%;
+  float: right;
+}
+#home-fourth #slider {
+  position: relative;
+  top: 50px;
+  width: 50vw;
+  height: 400px;
+}
+#home-fourth #slider:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+  z-index: -1;
+  border-radius: 100px/10px;
+}
+#home-fourth #slider:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+  z-index: -1;
+  box-shadow: 0 0 15px 1px #000;
+  border-radius: 100px/10px;
+  right: 30px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -transform: skew(8deg) rotate(3deg);
+}
+#home-fourth #slider input {
+  display: none;
+}
+#home-fourth #slider .slider-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+#home-fourth #slider #slides {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-animation: slider 26s infinite;
+  animation: slider 26s infinite;
+}
+#home-fourth #slider #slides:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+#home-fourth #slider #slides .slide {
+  position: relative;
+  width: 33.33333333%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+#home-fourth #slider #slides .slide .caption {
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #CFAA5B;
+  color: #000000;
+  padding: 20px 4%;
+}
+#home-fourth #slider #slides .slide .caption p {
+  font-size: 1.5em;
+  line-height: 150%;
+  position: relative;
+  font-family: "JOSEFINS";
+}
+#home-fourth #slider #slides .slide .caption p:before, #home-fourth #slider #slides .slide .caption p:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 10;
+  border-color: #FFFEF0;
+  border-style: solid;
+}
+#home-fourth #slider #slides .slide .caption p:before {
+  border-width: 2px 0 0 2px;
+  top: -5%;
+  left: -5%;
+}
+#home-fourth #slider #slides .slide .caption p:after {
+  border-width: 0 2px 2px 0;
+  bottom: -5%;
+  right: -5%;
+}
+#home-fourth #slider .timeline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: #f5f5f5;
+  -webkit-animation: timeline 26s infinite;
+  animation: timeline 26s infinite;
+}
+#home-fourth #slider #slides:hover ~ .timeline {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+@-webkit-keyframes slider {
+  0%, 25%, 100% {
+    left: 0;
+  }
+  30%, 55% {
+    left: -100%;
+  }
+  60%, 85% {
+    left: -200%;
+  }
+}
+@keyframes slider {
+  0%, 25%, 100% {
+    left: 0;
+  }
+  30%, 55% {
+    left: -100%;
+  }
+  60%, 85% {
+    left: -200%;
+  }
+}
+@-webkit-keyframes timeline {
+  0%, 30%, 60%, 100% {
+    width: 0;
+  }
+  25%, 55%, 85% {
+    width: 100%;
+  }
+}
+@keyframes timeline {
+  0%, 30%, 60%, 100% {
+    width: 0;
+  }
+  25%, 55%, 85% {
+    width: 100%;
+  }
+}
+@media (max-width: 1080px) {
+  #home-fourth {
+    /*--- End Slider animation ---*/
+  }
+  #home-fourth #home-first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7em;
+  }
+  #home-fourth #home-first h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+  #home-fourth #home-first h2 {
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 5%;
+  }
+  #home-fourth #home-first a {
+    width: fit-content;
+    border: solid 2px #CFAA5B;
+    padding: 1em;
+  }
+}
+@media (max-width: 1080px) and (max-width: 480px) {
+  #home-fourth #home-first h1 {
+    font-size: 2.5em;
+  }
+  #home-fourth #slider #slides .slide .caption {
+    width: 100%;
+    height: auto;
+    top: auto;
+    bottom: 0;
+    padding: 20px 8%;
+  }
+  #home-fourth #slider #slides .slide .caption p {
+    font-size: 100%;
+  }
+}
+
 /* ----------------------------- *
  *            GALLERY            *
  * ----------------------------- */
@@ -1784,6 +1998,21 @@ a {
   border-radius: 20px;
   background-color: #CFAA5B;
 }
+#reservation-second .reserver {
+  font-family: "TAN-PEARL";
+  border: none;
+  border-radius: 10px;
+  border-bottom: 2px solid #CFAA5B;
+  display: block;
+  width: 100%;
+  color: #383838;
+  height: 5em;
+  font-size: 1em;
+  margin: 0.5em;
+  padding: 1em;
+  background-color: #FDD1B8;
+  cursor: pointer;
+}
 
 /* ----------------------------- *
  *           CONTACT             *
@@ -2049,7 +2278,7 @@ a {
   padding-bottom: 0.5em;
 }
 #account-first p {
-  font-size: 5em;
+  font-size: 1em;
 }
 
 #deco-first {
@@ -2060,6 +2289,100 @@ a {
 }
 #deco-first p {
   font-size: 3em;
+}
+
+#basket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#basket h1 {
+  font-size: 3em;
+  padding-bottom: 2em;
+}
+#basket .table-content {
+  padding: 2em;
+  background-color: #FDD1B8;
+  color: black;
+}
+#basket th, #basket td {
+  padding: 0.5em;
+  border-left: 2px solid #CFAA5B;
+  border-right: 2px solid #CFAA5B;
+}
+
+#artistes-1,
+#artistes-2,
+#artistes-3,
+#artistes-4,
+#artistes-5,
+#artistes-6 {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+}
+#artistes-1 .content,
+#artistes-2 .content,
+#artistes-3 .content,
+#artistes-4 .content,
+#artistes-5 .content,
+#artistes-6 .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#artistes-1 .content .img,
+#artistes-2 .content .img,
+#artistes-3 .content .img,
+#artistes-4 .content .img,
+#artistes-5 .content .img,
+#artistes-6 .content .img {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "JOSEFINS";
+  font-size: 1.2em;
+}
+#artistes-1 .content .img img,
+#artistes-2 .content .img img,
+#artistes-3 .content .img img,
+#artistes-4 .content .img img,
+#artistes-5 .content .img img,
+#artistes-6 .content .img img {
+  min-height: auto;
+  width: 15em;
+  top: 13em;
+  padding-bottom: 1em;
+}
+#artistes-1 .content .text,
+#artistes-2 .content .text,
+#artistes-3 .content .text,
+#artistes-4 .content .text,
+#artistes-5 .content .text,
+#artistes-6 .content .text {
+  font-family: "JOSEFINS";
+  height: fit-content;
+  width: auto;
+  background-color: rgba(217, 217, 217, 0.6274509804);
+  padding: 2em;
+  margin: 3em;
+  bottom: 7em;
+  font-size: 1.2em;
+}
+#artistes-1 .content .text h1,
+#artistes-2 .content .text h1,
+#artistes-3 .content .text h1,
+#artistes-4 .content .text h1,
+#artistes-5 .content .text h1,
+#artistes-6 .content .text h1 {
+  font-family: "TAN-PEARL";
+  font-size: 2em;
 }
 
 /* ----------------------------- *
@@ -2126,6 +2449,132 @@ a {
   #gallery-second .popup-container1 .popup .paint .context {
     display: none;
   }
+  #gallery-second .popup-container2 .popup {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: space-between;
+    height: 90%;
+  }
+  #gallery-second .popup-container2 .popup .paint {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #gallery-second .popup-container2 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 7em 0.5em 7em;
+  }
+  #gallery-second .popup-container2 .popup .paint .context {
+    display: none;
+  }
+  #gallery-second .popup-container3 .popup {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: space-between;
+    height: 90%;
+  }
+  #gallery-second .popup-container3 .popup .paint {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #gallery-second .popup-container3 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 7em 0.5em 7em;
+  }
+  #gallery-second .popup-container3 .popup .paint .context {
+    display: none;
+  }
+  #gallery-second .popup-container4 .popup {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: space-between;
+    height: 90%;
+  }
+  #gallery-second .popup-container4 .popup .paint {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #gallery-second .popup-container4 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 7em 0.5em 7em;
+  }
+  #gallery-second .popup-container4 .popup .paint .context {
+    display: none;
+  }
+  #gallery-second .popup-container5 .popup {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: space-between;
+    height: 90%;
+  }
+  #gallery-second .popup-container5 .popup .paint {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #gallery-second .popup-container5 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 7em 0.5em 7em;
+  }
+  #gallery-second .popup-container5 .popup .paint .context {
+    display: none;
+  }
+  #gallery-second .popup-container6 .popup {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: space-between;
+    height: 90%;
+  }
+  #gallery-second .popup-container6 .popup .paint {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #gallery-second .popup-container6 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 7em 0.5em 7em;
+  }
+  #gallery-second .popup-container6 .popup .paint .context {
+    display: none;
+  }
+  #gallery-second .popup-container7 .popup {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: space-between;
+    height: 90%;
+  }
+  #gallery-second .popup-container7 .popup .paint {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #gallery-second .popup-container7 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 7em 0.5em 7em;
+  }
+  #gallery-second .popup-container7 .popup .paint .context {
+    display: none;
+  }
+  #gallery-second .popup-container1 .popup {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: space-between;
+    height: 90%;
+  }
+  #gallery-second .popup-container1 .popup .paint {
+    justify-content: center;
+    flex-direction: column;
+  }
+  #gallery-second .popup-container1 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 7em 0.5em 7em;
+  }
+  #gallery-second .popup-container1 .popup .paint .context {
+    display: none;
+  }
 }
 @media (max-width: 400px) {
   #gallery-second .one {
@@ -2161,22 +2610,46 @@ a {
   #gallery-second .six {
     height: 12em;
     width: auto;
-    bottom: 9em;
-    right: 2.5em;
-  }
-  #gallery-second .six {
-    height: 12em;
-    width: auto;
     bottom: 11em;
-    left: 4em;
+    right: 4em;
   }
   #gallery-second .seven {
     height: 12em;
     width: auto;
     bottom: 12em;
-    right: 4em;
+    left: 3em;
   }
   #gallery-second .popup-container1 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 3em 0.5em 3em;
+  }
+  #gallery-second .popup-container2 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 3em 0.5em 3em;
+  }
+  #gallery-second .popup-container3 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 3em 0.5em 3em;
+  }
+  #gallery-second .popup-container4 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 3em 0.5em 3em;
+  }
+  #gallery-second .popup-container5 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 3em 0.5em 3em;
+  }
+  #gallery-second .popup-container6 .popup .paint img {
+    width: 100%;
+    height: max-content;
+    padding: 0.5em 3em 0.5em 3em;
+  }
+  #gallery-second .popup-container7 .popup .paint img {
     width: 100%;
     height: max-content;
     padding: 0.5em 3em 0.5em 3em;
@@ -2192,6 +2665,14 @@ a {
   #contact-first h1 {
     font-size: 3em;
   }
+  #contact-first #artistes-1 .content, #contact-first #artistes-2 .content, #contact-first #artistes-3 .content, #contact-first #artistes-4 .content, #contact-first #artistes-5 .content, #contact-first #artistes-6 .content {
+    flex-direction: row;
+  }
+  #home-third h1 {
+    font-size: 2em;
+    width: 35em;
+    padding: 3em;
+  }
 }
 @media (max-width: 400px) {
   #contact-first .inner {
@@ -2202,6 +2683,9 @@ a {
   }
   #contact-first h2 {
     font-size: 1.5em;
+  }
+  #contact-first .form-control {
+    width: 80%;
   }
 }
 @media (max-width: 1000px) {
@@ -2294,10 +2778,39 @@ a {
     height: auto;
     width: inherit;
   }
-  .flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+  .flatpickr-months .flatpickr-prev-month,
+  .flatpickr-months .flatpickr-next-month {
     height: 1em;
     top: 10em;
     left: 21em;
+  }
+  #form {
+    width: 20em;
+  }
+}
+@media (max-width: 400px) {
+  #reservation-second .ticket {
+    flex-direction: column;
+  }
+  #reservation-second .ticket p {
+    font-size: 0.8em;
+  }
+  #reservation-second .ticket .ticket-text {
+    height: 100%;
+    width: inherit;
+  }
+  #reservation-second .ticket .ticket-price {
+    height: auto;
+    width: inherit;
+  }
+  .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month, .flatpickr-months .flatpickr-next-month.flatpickr-prev-month {
+    left: -2.5em;
+  }
+  form {
+    width: 20em;
+  }
+  .flatpickr-calendar.inline {
+    width: 20em;
   }
 }
 @media (max-width: 1300px) {
@@ -2395,79 +2908,6 @@ a {
     font-size: 2em;
   }
 }
-#artistes-1,
-#artistes-2,
-#artistes-3,
-#artistes-4,
-#artistes-5,
-#artistes-6 {
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3em;
-}
-#artistes-1 .content,
-#artistes-2 .content,
-#artistes-3 .content,
-#artistes-4 .content,
-#artistes-5 .content,
-#artistes-6 .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-#artistes-1 .content .img,
-#artistes-2 .content .img,
-#artistes-3 .content .img,
-#artistes-4 .content .img,
-#artistes-5 .content .img,
-#artistes-6 .content .img {
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "JOSEFINS";
-  font-size: 1.2em;
-}
-#artistes-1 .content .img img,
-#artistes-2 .content .img img,
-#artistes-3 .content .img img,
-#artistes-4 .content .img img,
-#artistes-5 .content .img img,
-#artistes-6 .content .img img {
-  min-height: auto;
-  width: 15em;
-  top: 13em;
-  padding-bottom: 1em;
-}
-#artistes-1 .content .text,
-#artistes-2 .content .text,
-#artistes-3 .content .text,
-#artistes-4 .content .text,
-#artistes-5 .content .text,
-#artistes-6 .content .text {
-  font-family: "JOSEFINS";
-  height: fit-content;
-  width: auto;
-  background-color: rgba(217, 217, 217, 0.6274509804);
-  padding: 2em;
-  margin: 3em;
-  bottom: 7em;
-  font-size: 1.2em;
-}
-#artistes-1 .content .text h1,
-#artistes-2 .content .text h1,
-#artistes-3 .content .text h1,
-#artistes-4 .content .text h1,
-#artistes-5 .content .text h1,
-#artistes-6 .content .text h1 {
-  font-family: "TAN-PEARL";
-  font-size: 2em;
-}
-
 footer {
   display: flex;
   justify-content: space-around;
