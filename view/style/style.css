@@ -2046,28 +2046,35 @@ footer {
   display: flex;
   justify-content: space-around;
   background-color: rgba(217, 217, 217, 0.43);
-  padding: 1.5em 2em 3em 2em;
+  padding: 1.5em 4em 3em 3em;
 }
 footer .logo {
-  height: 10em;
+  height: 15em;
+}
+footer .container-logo-info {
+  display: flex;
+}
+footer .container-logo-info a:hover {
+  text-decoration: underline;
 }
 footer .container-footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 footer h2 {
-  font-size: 1.5em;
+  font-size: 2.2em;
 }
 footer a {
-  font-size: 0.8em;
+  font-size: 1em;
 }
 footer .logo-container {
   display: flex;
-  justify-content: space-between;
 }
 footer .logo-container img {
-  width: 5em;
+  width: 8em;
+  padding: 0 0.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
