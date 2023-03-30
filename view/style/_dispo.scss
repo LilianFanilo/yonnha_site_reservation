@@ -6,12 +6,21 @@
 #dispo-first {
     @include center-col;
     font-size: 4em;
+    a {
+        font-family: 'JOSEFINS';
+        font-size: 0.5em ;
+        width: fit-content;
+        border: solid 2px $sec-color;
+        padding: 0.5em;
+    }
 }
 
 #dispo-second {
     @include center-col;
     font-family: 'JOSEFINS';
     font-size: 1.5em;
+    
+
     .content {
            width: 80%; 
 

@@ -117,7 +117,13 @@
     box-sizing: border-box;
   }
 
-  
+  a {
+    width: fit-content;
+    border: solid 2px $sec-color;
+    padding: 1em;
+    padding-top: 5em;
+}
+
   img {
     display: block;
     width: auto;
@@ -130,6 +136,7 @@
     top: 50px;
     width: 50vw;
     height: 400px;
+
   
     &:before {
       content: "";

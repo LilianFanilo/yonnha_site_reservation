@@ -361,6 +361,12 @@ a {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
+#home-fourth a {
+  width: fit-content;
+  border: solid 2px #CFAA5B;
+  padding: 1em;
+  padding-top: 5em;
+}
 #home-fourth img {
   display: block;
   width: auto;
@@ -2077,6 +2083,13 @@ a {
   align-items: center;
   font-size: 4em;
 }
+#dispo-first a {
+  font-family: "JOSEFINS";
+  font-size: 0.5em;
+  width: fit-content;
+  border: solid 2px #CFAA5B;
+  padding: 0.5em;
+}
 
 #dispo-second {
   display: flex;
@@ -2656,6 +2669,15 @@ a {
   }
 }
 @media (max-width: 1020px) {
+  #dispo-first h1 {
+    font-size: 0.9em;
+  }
+  #dispo-first h2 {
+    font-size: 0.9em;
+  }
+  #dispo-first a {
+    font-size: 0.25em;
+  }
   #contact-first {
     display: flex;
     flex-direction: column;
@@ -2668,13 +2690,25 @@ a {
   #contact-first #artistes-1 .content, #contact-first #artistes-2 .content, #contact-first #artistes-3 .content, #contact-first #artistes-4 .content, #contact-first #artistes-5 .content, #contact-first #artistes-6 .content {
     flex-direction: row;
   }
-  #home-third h1 {
-    font-size: 2em;
+  #home-first h1 {
+    font-size: 3em;
     width: 35em;
-    padding: 3em;
+    padding: 0.7em;
+  }
+  #home-first h2 {
+    font-size: 1.5em;
   }
 }
 @media (max-width: 400px) {
+  #dispo-first h1 {
+    font-size: 0.5em;
+  }
+  #dispo-first h2 {
+    font-size: 0.5em;
+  }
+  #dispo-first a {
+    font-size: 0.2em;
+  }
   #contact-first .inner {
     width: 90%;
   }
@@ -2687,6 +2721,13 @@ a {
   #contact-first .form-control {
     width: 80%;
   }
+  #home-first h1 {
+    font-size: 1.5em;
+    padding: 0.25em;
+  }
+  #home-first h2 {
+    font-size: 1.5em;
+  }
 }
 @media (max-width: 1000px) {
   #account-first h2 {
@@ -2749,6 +2790,20 @@ a {
   }
 }
 @media (max-width: 1000px) {
+  #home-third p {
+    font-size: 1.5em;
+    width: 35em;
+    padding: 3em;
+  }
+  #home-first h1 {
+    font-size: 2.5em;
+  }
+  #home-fourth #slider #slides .slide .caption p {
+    font-size: 1em;
+    line-height: 150%;
+    position: relative;
+    font-family: "JOSEFINS";
+  }
   #log-page h2 {
     font-size: 1.2em;
     padding-bottom: 0.2em;
@@ -2764,6 +2819,22 @@ a {
   }
 }
 @media (max-width: 690px) {
+  #home-first h1 {
+    font-size: 2em;
+    width: 35em;
+    padding: 0.7em;
+  }
+  #home-third p {
+    font-size: 1em;
+    width: 35em;
+    padding: 3em;
+  }
+  #home-fourth #slider #slides .slide .caption p {
+    font-size: 1em;
+    line-height: 150%;
+    position: relative;
+    font-family: "JOSEFINS";
+  }
   #reservation-second .ticket {
     flex-direction: column;
   }
