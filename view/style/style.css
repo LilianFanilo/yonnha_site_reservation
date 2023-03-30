@@ -2042,5 +2042,32 @@ a {
     font-size: 1.5em;
   }
 }
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(217, 217, 217, 0.43);
+  padding: 1.5em 2em 3em 2em;
+}
+footer .logo {
+  height: 10em;
+}
+footer .container-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer h2 {
+  font-size: 1.5em;
+}
+footer a {
+  font-size: 0.8em;
+}
+footer .logo-container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .logo-container img {
+  width: 5em;
+}
 
 /*# sourceMappingURL=style.css.map */
