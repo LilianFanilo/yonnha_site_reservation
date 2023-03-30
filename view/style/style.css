@@ -2049,6 +2049,16 @@ a {
   padding-bottom: 0.5em;
 }
 
+#deco-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#deco-first p {
+  font-size: 3em;
+}
+
 /* ----------------------------- *
  *          MEDIAQUERY           *
  * ----------------------------- */
@@ -2251,14 +2261,51 @@ a {
     padding: 1em;
   }
 }
+@media (max-width: 1000px) {
+  #log-page h2 {
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+  }
+  #log-page .inner {
+    height: 31em;
+    width: 30em;
+  }
+  #log-page span {
+    font-size: 0.9em;
+    color: black;
+    padding: 1em;
+  }
+}
+@media (max-width: 690px) {
+  #reservation-second .ticket {
+    flex-direction: column;
+  }
+  #reservation-second .ticket p {
+    font-size: 0.8em;
+  }
+  #reservation-second .ticket .ticket-text {
+    height: 100%;
+    width: inherit;
+  }
+  #reservation-second .ticket .ticket-price {
+    height: auto;
+    width: inherit;
+  }
+  .flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+    height: 1em;
+    top: 10em;
+    left: 21em;
+  }
+}
 footer {
   display: flex;
   justify-content: space-around;
   background-color: rgba(217, 217, 217, 0.43);
-  padding: 1.5em 4em 3em 3em;
 }
 footer .logo {
-  height: 15em;
+  position: relative;
+  top: 2.5em;
+  height: 10em;
 }
 footer .logo-hover {
   padding: 0 0.5em;
@@ -2283,10 +2330,10 @@ footer .container-footer {
   align-items: center;
 }
 footer h2 {
-  font-size: 2.2em;
+  font-size: 1.5em;
 }
 footer a {
-  font-size: 1em;
+  font-size: 0.8em;
 }
 footer .logo-container {
   display: flex;

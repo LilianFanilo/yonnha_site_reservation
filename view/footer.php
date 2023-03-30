@@ -9,7 +9,7 @@
     </div>
     <div>
         <svg width="1" height="250">
-                <rect width="100%" height="100%" fill="#00000" />
+                <rect width="100%" height="100%" fill="#CFAA5B" />
         </svg>
     </div>
     <div class="container-footer">

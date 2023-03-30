@@ -186,3 +186,10 @@
         padding-bottom: 0.5em;
     }
 }
+
+#deco-first {
+    @include center-col;
+    p{
+        font-size: 3em;
+    }
+}
