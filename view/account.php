@@ -70,7 +70,7 @@ if (isset($_GET["action"])) :
                         </ul>
                     </form>
                 </div>
-            </section>
+            
 
             <?php
             if (isset($_GET["result"])) :
@@ -87,7 +87,7 @@ if (isset($_GET["action"])) :
                 endif;
             endif;
             ?>
-
+</section>
         </body>
 
         </html>
@@ -173,10 +173,13 @@ if (isset($_GET["action"])) :
         </head>
 
         <body>
+
             <?php
             include 'navbar.php';
             ?>
-            Vous avez bien été déconnecté
+            <section id="deco-first">
+            <p> Vous avez bien été déconnecté</p>
+            </section>
         </body>
 
         </html>

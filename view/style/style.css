@@ -2048,6 +2048,9 @@ a {
   height: 1.7em;
   padding-bottom: 0.5em;
 }
+#account-first p {
+  font-size: 5em;
+}
 
 #deco-first {
   display: flex;

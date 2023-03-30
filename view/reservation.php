@@ -60,7 +60,7 @@
             <?php endif; ?>
         </div>
         </form>
-        <div class="popup-status">
+       
             <?php
             if (isset($_GET["action"])) :
 
@@ -80,7 +80,7 @@
                 endif;
             endif;
             ?>
-        </div>
+        
     </section>
 
     <script>
