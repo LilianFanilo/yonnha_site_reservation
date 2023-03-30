@@ -2117,8 +2117,18 @@ footer {
 footer .logo {
   height: 15em;
 }
+footer .logo-hover {
+  padding: 0 0.5em;
+  width: 10em;
+}
+footer .logo-hover:hover {
+  fill: rgba(253, 209, 184, 0.8);
+}
 footer .container-logo-info {
   display: flex;
+}
+footer .container-logo-info a {
+  text-align: center;
 }
 footer .container-logo-info a:hover {
   text-decoration: underline;
