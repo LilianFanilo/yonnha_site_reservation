@@ -131,10 +131,10 @@ curl_close($curl);
                 <span class="timeline"></span>
                 <!-- End Timeline -->
             </div>
-            <a href="index.php?tag=dispositif" alt="Voir la page artiste">Voir plus d'artistes!</a>
 
         </Section>
         <!--- End Slider --->
+        <a href="index.php?tag=artistes" alt="Voir la page artiste">Voir plus d'artistes!</a>
 
     </section>
     <?php

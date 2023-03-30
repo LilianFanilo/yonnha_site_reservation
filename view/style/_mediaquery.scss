@@ -574,6 +574,15 @@
 
 }
 @media(max-width:400px) {
+  #home-first h1 {
+    font-size: 1em;
+
+}
+#home-third p {
+  font-size: 0.6em;
+  width: 23em;
+  padding: 4em;
+}
 
   #reservation-second .ticket {
     flex-direction: column;

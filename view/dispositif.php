@@ -20,7 +20,8 @@
 
     <section id="dispo-first">
         <h1>Dispositif Intéractif</h1>
-        <h2>Immers'Paint</h2>
+        <h2>ImmersivePaint</h2>
+        <a href="#">Voir ImmersivePaint</a>
     </section>
     <section id="dispo-second">
         <div class="content">
