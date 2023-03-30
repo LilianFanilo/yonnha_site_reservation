@@ -7,11 +7,20 @@ footer {
     .logo {
         height: 15em;
     }
+    
+    .logo-hover{
+        padding: 0 0.5em;
+        width: 10em;
+        &:hover {
+        fill: rgb(253, 209, 184, 0.8);
+    }
+    }
 
     .container-logo-info {
         display: flex;
 
         a {
+            text-align: center;
             &:hover{
                 text-decoration: underline;
             }
