@@ -1891,6 +1891,89 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 6em;
+  font-family: "JOSEFINS";
+}
+#log-page h1 {
+  text-align: center;
+  font-size: 3em;
+  padding: 0.5em;
+}
+#log-page h2 {
+  font-family: "TAN-PEARL";
+  font-size: 1.5em;
+  padding-bottom: 0.7em;
+  text-align: center;
+}
+#log-page .inner {
+  height: 30em;
+  width: 30em;
+  background: rgba(253, 209, 184, 0.5882352941);
+  padding: 1.8em 1.8em 0.8em 1.7em;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+#log-page a:hover {
+  text-decoration: none;
+}
+#log-page :focus {
+  outline: none;
+}
+#log-page .form-group {
+  position: relative;
+  display: block;
+}
+#log-page span {
+  font-size: 1.1em;
+  color: black;
+  padding: 1em;
+}
+#log-page .form-control {
+  border: none;
+  border-radius: 10px;
+  border-bottom: 2px solid #CFAA5B;
+  display: block;
+  width: 100%;
+  height: 43px;
+  font-size: 1em;
+  margin: 0.5em;
+  padding: 1em;
+  background: #FFFEF0;
+}
+#log-page input {
+  height: 3em;
+  width: 100%;
+  color: whitesmoke;
+  border-radius: 3px;
+  background-color: #383838;
+  font-family: "TAN-PEARL";
+  margin: 0.7em;
+}
+#log-page input.form-control {
+  color: #383838;
+  font-family: "JOSEFINS";
+  height: 1.7em;
+  padding-bottom: 0.5em;
+}
+#log-page input#myInput {
+  border: none;
+  border-radius: 10px;
+  border-bottom: 2px solid #CFAA5B;
+  display: block;
+  width: 100%;
+  color: #383838;
+  height: 43px;
+  font-size: 1em;
+  margin: 0.5em;
+  padding: 1em;
+  background: #FFFEF0;
 }
 
 #account-first {
@@ -1966,36 +2049,6 @@ a {
   padding-bottom: 0.5em;
 }
 
-@media (max-width: 1000px) {
-  #account-first h2 {
-    font-size: 1.2em;
-    padding-bottom: 0.2em;
-  }
-  #account-first .inner {
-    height: 31em;
-    width: 30em;
-  }
-  #account-first span {
-    font-size: 0.9em;
-    color: black;
-    padding: 1em;
-  }
-}
-@media (max-width: 690px) {
-  #account-first h2 {
-    font-size: 1.2em;
-    padding-bottom: 0.2em;
-  }
-  #account-first .inner {
-    height: 31em;
-    width: 20em;
-  }
-  #account-first span {
-    font-size: 0.9em;
-    color: black;
-    padding: 1em;
-  }
-}
 /* ----------------------------- *
  *          MEDIAQUERY           *
  * ----------------------------- */
@@ -2136,6 +2189,66 @@ a {
   }
   #contact-first h2 {
     font-size: 1.5em;
+  }
+}
+@media (max-width: 1000px) {
+  #account-first h2 {
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+  }
+  #account-first .inner {
+    height: 31em;
+    width: 30em;
+  }
+  #account-first span {
+    font-size: 0.9em;
+    color: black;
+    padding: 1em;
+  }
+}
+@media (max-width: 690px) {
+  #account-first h2 {
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+  }
+  #account-first .inner {
+    height: 31em;
+    width: 20em;
+  }
+  #account-first span {
+    font-size: 0.9em;
+    color: black;
+    padding: 1em;
+  }
+}
+@media (max-width: 1000px) {
+  #log-page h2 {
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+  }
+  #log-page .inner {
+    height: 31em;
+    width: 30em;
+  }
+  #log-page span {
+    font-size: 0.9em;
+    color: black;
+    padding: 1em;
+  }
+}
+@media (max-width: 690px) {
+  #log-page h2 {
+    font-size: 1.2em;
+    padding-bottom: 0.2em;
+  }
+  #log-page .inner {
+    height: 31em;
+    width: 20em;
+  }
+  #log-page span {
+    font-size: 0.9em;
+    color: black;
+    padding: 1em;
   }
 }
 footer {

@@ -27,42 +27,49 @@ if (isset($_GET["action"])) :
             ?>
 
             <section id="log-page">
-                <form action="./api/users.php">
-                    <ul>
+                <div class="log inner">
+                    <form action="./api/users.php">
+                        <ul>
 
-                        <li>
-                            <h1>Entrez vos identifiants</h1>
-                        </li>
-                        <li>
-                            <label for="login">Login : </label>
-                            <INPUT type=text name="login">
-                            <?php
-                            if (isset($_GET["err"]) && $_GET["err"] == "login") {
-                                echo "ATTENTION MAUVAIS LOGIN";
-                            }
-                            ?>
-                        </li>
-                        <li>
-                            <label for="pwd">Mot de passe :</label>
-                            <input type="password" name="pwd" id="myInput">
-                            <div class="show-pwd">
-                                <label for="show_pwd">Montrer mot de passe</label>
-                                <input type="checkbox" onclick="myFunction()" name="show_pwd" id="myButton">
-                            </div>
-                            <?php
-                            if (isset($_GET["err"]) && $_GET["err"] == "mdp") {
-                                echo "ATTENTION MAUVAIS MOT DE PASSE";
-                            }
-                            ?>
-                        </li>
-                        <li>
-                            <input class="btn-bubble" type=submit value="OK">
-                        </li>
+                            <li>
+                                <h1>Entrez vos identifiants</h1>
+                            </li>
+                            <li>
+                                <span for="">Login : </span>
+                                <label for="login">
+                                    <input type=text name="login" class="form-control" required>
+                                    <?php
+                                    if (isset($_GET["err"]) && $_GET["err"] == "login") {
+                                        echo "ATTENTION MAUVAIS LOGIN";
+                                    }
+                                    ?>
+                                </label>
+                            </li>
+                            <li>
+                                <span for="">Mot de passe :</span>
+                                <label for="pwd">
+                                    <input type="password" name="pwd" id="myInput" required>
+                                </label>
+                                <div class="show-pwd">
+                                    <label for="show_pwd">Montrer mot de passe
+                                        <input type="checkbox" onclick="myFunction()" name="show_pwd" id="myButton" class="form-control">
+                                    </label>
+                                </div>
+                                <?php
+                                if (isset($_GET["err"]) && $_GET["err"] == "mdp") {
+                                    echo "ATTENTION MAUVAIS MOT DE PASSE";
+                                }
+                                ?>
+                            </li>
+                            <li>
+                                <input class="btn-bubble" type=submit value="VALIDATION">
+                            </li>
 
-                        <input type="hidden" name="session_login">
+                            <input type="hidden" name="session_login">
 
-                    </ul>
-                </form>
+                        </ul>
+                    </form>
+                </div>
             </section>
 
             <?php
