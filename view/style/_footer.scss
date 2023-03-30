@@ -1,0 +1,33 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(217, 217, 217, 0.43);
+    padding: 1.5em 2em 3em 2em;
+
+    .logo {
+        height: 10em;
+    }
+
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    a {
+        font-size: 0.8em;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: space-between;
+        
+        img{
+            width: 5em;
+        }
+    }
+}
